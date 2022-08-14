@@ -28,7 +28,7 @@ int main(){
     c = num1 * num1;
     d = sqrt((num1 * num1) +(num2 * num2));
     e = sin(num1 - num2);
-    f = abs(num1);
+    f = fabsf(num1);
     
     
     
@@ -38,7 +38,6 @@ int main(){
     cout << "A raiz quadrada da soma dos quadrados: " << d << endl;
     cout << "O seno da diferença do primeiro numero pelo segundo: " << e << endl;
     cout << "O modulo do primeiro : " << f << endl;
-    
     
     return 0;
 }
