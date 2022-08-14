@@ -238,9 +238,9 @@ resultado da divisão deve retonar por um parâmetro por referência.
 
 3. Fazer uma rotina em "C" que recebe um vetor de números inteiros como
 parâmetro onde todos os valores exceto o último são positivos e devolve:
- - a média dos valores do vetor;
- - o menor valor do vetor (sem considerar o último)
- - o maior valor do vetor
+  - a média dos valores do vetor;
+  - o menor valor do vetor (sem considerar o último)
+  - o maior valor do vetor
 
 4. Fazer uma função para ler e retornar o valor das 3 notas de um aluno.
 
