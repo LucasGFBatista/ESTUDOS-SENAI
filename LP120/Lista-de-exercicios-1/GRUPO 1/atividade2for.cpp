@@ -10,4 +10,5 @@ int main(){
     resultado = numero * i;
     cout << numero << "x" << i << "=" << resultado << endl;
   }
-  return 0;}
+  return 0;
+  }
