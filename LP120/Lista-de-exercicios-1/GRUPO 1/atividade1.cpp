@@ -1,3 +1,9 @@
+/*
+1. Fazer um programa em C/C++ que pergunta um valor em metros e imprime o
+correspondente em decímetros, centímetros e milímetros.
+
+*/
+
 #include <iostream>
 using namespace std;
 
