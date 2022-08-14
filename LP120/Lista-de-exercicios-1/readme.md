@@ -18,21 +18,23 @@ a) Usar uma variável double para ler o valor em Fahrenheit e a fórmula
 C=(f-32.0) * (5.0/9.0).
 b) Usar uma variável int para ler o valor em Fahrenheit e a fórmula
 C=(f-32)*(5/9).
+
 5. Fazer um programa em "C" que solicite 2 números e informe:
-a) A soma dos números;
-b) O produto do primeiro número pelo quadrado do segundo;
-c) O quadrado do primeiro número;
-d) A raiz quadrada da soma dos quadrados;
-e) O seno da diferença do primeiro número pelo segundo;
-f) O módulo do primeiro número.
+- a) A soma dos números;
+- b) O produto do primeiro número pelo quadrado do segundo;
+- c) O quadrado do primeiro número;
+- d) A raiz quadrada da soma dos quadrados;
+- e) O seno da diferença do primeiro número pelo segundo;
+- f) O módulo do primeiro número.
 
 <h2> Grupo II - explorando os comandos de controle de fluxo </h2>
+
 1. Faça um programa em "C" que lê dois valores e imprime:
-- se o primeiro valor for menor que o segundo, a lista de valores do primeiro até
+ - se o primeiro valor for menor que o segundo, a lista de valores do primeiro até
 o segundo;
-- se o primeiro valor for menor que o segundo a lista de valores do segundo até
+ - se o primeiro valor for menor que o segundo a lista de valores do segundo até
 o primeiro em ordem decrescente;
-- se ambos forem iguais a mensagem "valores iguais".
+ - se ambos forem iguais a mensagem "valores iguais".
 2. Fazer um programa que imprime a tabela ASCII (código decimal, código hexa,
 caracter) para os códigos de 0 a 127.
 3. Fazer um programa em "C" que lê o preço de um produto e inflaciona esse
@@ -49,9 +51,11 @@ imprime para cada um a média das notas. O programa deve parar
 imediatamente após ter sido digitado o valor 50 para a nota da primeira prova.
 
   <h2> III - Explorando comandos do pré-processador </h2>
+  
 1. Escrever a seqüência de comandos do pré-processador que define o tipo de
 dados BOOL (com as constantes TRUE e FALSE) caso isso ainda não tenha
 sido feito.
+
 2. Faca um programa em "C" que le dois números e utiliza uma função chamada
 "soma" e outra chamada "subtracao" para imprimir a soma e a diferenca entre
 os dois números. Ambas funções devem receber dois inteiros como parâmetro
@@ -223,18 +227,23 @@ valor em decimal
 Ex: conv2dec("345", 8) => 229
 
   <h2> Grupo VIII - Passagem de parâmetros e estruturas </h2>
+  
 1. Fazer uma função que retorna a soma, a diferença e o produto entre dois
 números.
+
 2. Fazer uma função em "C" que retorna a razão entre dois números. A função
 deve retornar pelo comando return o valor 1 se a operação foi possível e o
 valor 0 se a operação não foi possível (divisão por zero, por exemplo). O
 resultado da divisão deve retonar por um parâmetro por referência.
+
 3. Fazer uma rotina em "C" que recebe um vetor de números inteiros como
 parâmetro onde todos os valores exceto o último são positivos e devolve:
-- a média dos valores do vetor;
-- o menor valor do vetor (sem considerar o último)
-- o maior valor do vetor
+  - a média dos valores do vetor;
+  - o menor valor do vetor (sem considerar o último)
+  - o maior valor do vetor
+
 4. Fazer uma função para ler e retornar o valor das 3 notas de um aluno.
+
 5. Construir um programa em "C" que implementa uma agenda eletrônica. O
 programa deve ter um menu com as seguintes opções:
 • Entrar um novo nome na agenda.
