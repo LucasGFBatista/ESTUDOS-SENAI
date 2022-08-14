@@ -59,7 +59,6 @@ int main(){
      do{
     resultado = numero * i;
     cout << numero << " * " << i << " = " << resultado << endl;
-    i++;
     } while(i <= 10);
   }
 
