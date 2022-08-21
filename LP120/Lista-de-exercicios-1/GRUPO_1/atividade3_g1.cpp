@@ -7,14 +7,14 @@ correspondente em hexa e octal.
 using namespace std;
 
 int main(){
-    int decimal, resto, resultado, i = 0;
+    int decimal, resto, resultado, hexadecimal, i = 0;
     cout << "DIGITE O NUMERO DECIMAL A SER CONVERTIDO: ";
     cin >> decimal;
 
     do{
     resto = decimal % 16;
     resultado = decimal / 16;
-    decimal = resultado;
+    hexadecimal = resultado;
     i++;
     } while (decimal > 15);
 
