@@ -50,7 +50,7 @@ cada um dos alunos de uma turma (as notas tem de estar no intervalo [0 10]) e
 imprime para cada um a média das notas. O programa deve parar
 imediatamente após ter sido digitado o valor 50 para a nota da primeira prova.
 
-  <h2> III - Explorando comandos do pré-processador </h2>
+  <h2>GRUPO III - Explorando comandos do pré-processador </h2>
   
 1. Escrever a seqüência de comandos do pré-processador que define o tipo de
 dados BOOL (com as constantes TRUE e FALSE) caso isso ainda não tenha
@@ -63,7 +63,7 @@ e retornar um inteiro como resultado. O programa deve ter duas versões para
 os protótipos das funções selecionáveis através da definição das constantes:
 "KR" (Kernighan e Ritchie) e "ANSI" (padrão ANSI).
 
-  <h2>  IV - Explorando o uso de funções </h2>
+  <h2> GRUPO IV - Explorando o uso de funções </h2>
 1. Fazer uma função que cacula a enésima potência de uma variável real x:
 
 f(x, n) = xn
