@@ -35,12 +35,14 @@ o segundo;
  - se o primeiro valor for menor que o segundo a lista de valores do segundo até
 o primeiro em ordem decrescente;
  - se ambos forem iguais a mensagem "valores iguais".
+ 
 2. Fazer um programa que imprime a tabela ASCII (código decimal, código hexa,
 caracter) para os códigos de 0 a 127.
+
 3. Fazer um programa em "C" que lê o preço de um produto e inflaciona esse
 preço em 10% se ele for menor que 100 e em 20% se ele for maior ou igual a
-100.
-OBS: não use o comando "if" ou o operador de condição "?".
+100   
+- OBS: não use o comando "if" ou o operador de condição "?".
 
 4. Fazer um programa que lê um valor, um operador (+,-,*,/) e outro valor e
 imprime o resultado da expressão:
