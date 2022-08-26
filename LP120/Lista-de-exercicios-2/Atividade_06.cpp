@@ -1,4 +1,7 @@
-// 1. Faca um programa que receba dois numeros e mostre qual deles eh o maior.
+/*
+Escreva um programa que, dados dois numeros inteiros, mostre na tela o maior deles, ´
+assim como a diferenc¸a existente entre ambos
+*/
 
 #include <iostream>
 #include <locale.h>
@@ -19,15 +22,17 @@ int main()
         if (numero1 > numero2)
         {
             max = numero1;
-            cout << "O maior número é: " << max;
+            cout << "\nO maior número é: " << max;
+            cout << "\nA diferença entre " << numero1 << " e " << numero2 << " é " << abs(numero1 - numero2);
         }
         else
         {
             max = numero2;
             cout << "\nO maior número é: " << max;
+            cout << "\nA diferença entre " <<  numero1 << " e " <<  numero2 <<  " é " << abs(numero2 - numero1);
         }
 
-        cout << "\nDeseja continuar? (S/N) :";
+        cout << "\nDeseja continuar? (S/N) : ";
         cin >> continuar;
         system("cls");
 
