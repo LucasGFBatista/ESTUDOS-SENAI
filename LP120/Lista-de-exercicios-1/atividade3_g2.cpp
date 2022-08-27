@@ -1,4 +1,4 @@
-/* 
+/*
 Fazer um programa que lê um valor, um operador (+,-,*,/) e outro valor e imprime o resultado da expressão: <valor 1> <valor 2>
 */
 
@@ -6,7 +6,8 @@ Fazer um programa que lê um valor, um operador (+,-,*,/) e outro valor e imprim
 #include <locale.h>
 using namespace std;
 
-int main(){
+int main()
+{
     char operador;
     float num1, num2, resultado;
 
@@ -22,26 +23,23 @@ int main(){
     case "+":
         resultado = num1 + num2;
         cout << resultado;
-    break;
+        break;
     case '-':
         resultado = num1 - num2;
         cout << resultado;
-    break;
+        break;
     case '*':
-          resultado = num1 * num2;
+        resultado = num1 * num2;
         cout << resultado;
-    break;
+        break;
     case '/':
         resultado = num1 / num2;
         cout << resultado;
-    break;
+        break;
     default:
-    cout << "Operador invalido!";
+        cout << "Operador invalido!";
         break;
     }
-
-
-
 
     return 0;
 }

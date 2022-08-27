@@ -5,7 +5,8 @@
 #include <iostream>
 using namespace std;
 
-int main(){
+int main()
+{
   int resultado, numero, operacao, i;
 
   cout << "1 - Adicao" << endl;
@@ -14,8 +15,9 @@ int main(){
   cout << "4 - Divisao" << endl;
   cout << "Escolha qual operacao da tabuada: ";
   cin >> operacao;
- 
- switch (operacao){
+
+  switch (operacao)
+  {
   case 1:
     system("cls");
     cout << "Adicao\n";
@@ -42,36 +44,43 @@ int main(){
     break;
   default:
     system("cls");
-    cout  << "Nao existe opcao. Por favor, escolher uma opercao da lista.\n";
- }
+    cout << "Nao existe opcao. Por favor, escolher uma opercao da lista.\n";
+  }
 
-  
-
-  if(operacao == 1){
-    for (i = 0 ;i <= 10; i++ ){
+  if (operacao == 1)
+  {
+    for (i = 0; i <= 10; i++)
+    {
       resultado = numero + i;
       cout << numero << " + " << i << " = " << resultado << endl;
     }
   }
 
-  if(operacao == 2){
-    for (i = 0; i <= 10; i++ ){
+  if (operacao == 2)
+  {
+    for (i = 0; i <= 10; i++)
+    {
       resultado = numero - i;
       cout << numero << " - " << i << " = " << resultado << endl;
     }
   }
 
-  if(operacao == 3){
-    for (i = 0; i <= 10; i++ ){
+  if (operacao == 3)
+  {
+    for (i = 0; i <= 10; i++)
+    {
       resultado = numero * i;
       cout << numero << " * " << i << " = " << resultado << endl;
     }
   }
 
-  if(operacao == 4){
-    for (i = 0; i <= 10; i++ ){
+  if (operacao == 4)
+  {
+    for (i = 0; i <= 10; i++)
+    {
       resultado = numero / i;
       cout << numero << " / " << i << " = " << resultado << endl;
     }
   }
-  return 0;}
+  return 0;
+}

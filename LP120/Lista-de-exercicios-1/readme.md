@@ -2,24 +2,24 @@
 
 <h2> Grupo I - programa seqüênciais simples </h2>
 
-
 1. Fazer um programa em C que pergunta um valor em metros e imprime o
-correspondente em decímetros, centímetros e milímetros.
+   correspondente em decímetros, centímetros e milímetros.
 
 2. Fazer um programa em C que imprime uma tabela com a tabuada de 1 a 9
 
 3. Fazer um programa que solicita um número decimal e imprime o
-correspondente em hexa e octal.
+   correspondente em hexa e octal.
 
 4. Fazer um programa em "C" que pergunte um valor em graus Fahrenheit e
-imprime no vídeo o correspondente em graus Celsius usando as fórmulas que
-seguem.
-a) Usar uma variável double para ler o valor em Fahrenheit e a fórmula
-C=(f-32.0) * (5.0/9.0).
-b) Usar uma variável int para ler o valor em Fahrenheit e a fórmula
-C=(f-32)*(5/9).
+   imprime no vídeo o correspondente em graus Celsius usando as fórmulas que
+   seguem.
+   a) Usar uma variável double para ler o valor em Fahrenheit e a fórmula
+   C=(f-32.0) _ (5.0/9.0).
+   b) Usar uma variável int para ler o valor em Fahrenheit e a fórmula
+   C=(f-32)_(5/9).
 
 5. Fazer um programa em "C" que solicite 2 números e informe:
+
 - a) A soma dos números;
 - b) O produto do primeiro número pelo quadrado do segundo;
 - c) O quadrado do primeiro número;
@@ -30,27 +30,29 @@ C=(f-32)*(5/9).
 <h2> Grupo II - explorando os comandos de controle de fluxo </h2>
 
 1. Faça um programa em "C" que lê dois valores e imprime:
- - se o primeiro valor for menor que o segundo, a lista de valores do primeiro até
-o segundo;
- - se o primeiro valor for menor que o segundo a lista de valores do segundo até
-o primeiro em ordem decrescente;
- - se ambos forem iguais a mensagem "valores iguais".
- 
+
+- se o primeiro valor for menor que o segundo, a lista de valores do primeiro até
+  o segundo;
+- se o primeiro valor for menor que o segundo a lista de valores do segundo até
+  o primeiro em ordem decrescente;
+- se ambos forem iguais a mensagem "valores iguais".
+
 2. Fazer um programa que imprime a tabela ASCII (código decimal, código hexa,
-caracter) para os códigos de 0 a 127.
+   caracter) para os códigos de 0 a 127.
 
 3. Fazer um programa em "C" que lê o preço de um produto e inflaciona esse
-preço em 10% se ele for menor que 100 e em 20% se ele for maior ou igual a
-100   
+   preço em 10% se ele for menor que 100 e em 20% se ele for maior ou igual a
+   100
+
 - OBS: não use o comando "if" ou o operador de condição "?".
 
-4. Fazer um programa que lê um valor, um operador (+,-,*,/) e outro valor e
-imprime o resultado da expressão:
-<valor 1> <operador> <valor 2>
+4. Fazer um programa que lê um valor, um operador (+,-,\*,/) e outro valor e
+   imprime o resultado da expressão:
+   <valor 1> <operador> <valor 2>
 5. Escrever um programa em "C" que solicita as notas das duas provas feitas por
-cada um dos alunos de uma turma (as notas tem de estar no intervalo [0 10]) e
-imprime para cada um a média das notas. O programa deve parar
-imediatamente após ter sido digitado o valor 50 para a nota da primeira prova.
+   cada um dos alunos de uma turma (as notas tem de estar no intervalo [0 10]) e
+   imprime para cada um a média das notas. O programa deve parar
+   imediatamente após ter sido digitado o valor 50 para a nota da primeira prova.
 
   <h2>GRUPO III - Explorando comandos do pré-processador </h2>
   
@@ -59,11 +61,11 @@ dados BOOL (com as constantes TRUE e FALSE) caso isso ainda não tenha
 sido feito.
 
 2. Faca um programa em "C" que le dois números e utiliza uma função chamada
-"soma" e outra chamada "subtracao" para imprimir a soma e a diferenca entre
-os dois números. Ambas funções devem receber dois inteiros como parâmetro
-e retornar um inteiro como resultado. O programa deve ter duas versões para
-os protótipos das funções selecionáveis através da definição das constantes:
-"KR" (Kernighan e Ritchie) e "ANSI" (padrão ANSI).
+   "soma" e outra chamada "subtracao" para imprimir a soma e a diferenca entre
+   os dois números. Ambas funções devem receber dois inteiros como parâmetro
+   e retornar um inteiro como resultado. O programa deve ter duas versões para
+   os protótipos das funções selecionáveis através da definição das constantes:
+   "KR" (Kernighan e Ritchie) e "ANSI" (padrão ANSI).
 
   <h2> GRUPO IV - Explorando o uso de funções </h2>
 1. Fazer uma função que cacula a enésima potência de uma variável real x:
@@ -71,22 +73,23 @@ os protótipos das funções selecionáveis através da definição das constant
 f(x, n) = xn
 
 2. Fazer uma função que calcula o fatorial de um número. Implementar uma
-versão recursiva e uma versão com laço.
+   versão recursiva e uma versão com laço.
 3. Dado que podemos calcular ex por:
-ex = 1 + x + x2/2! + x3/3! + ...
-Fazer um trecho de programa em "C" que lê um valor para x e calcula o valor de
-ex. O valor deve ser calculado enquanto o termo calculado for maior que 10E-6.
+   ex = 1 + x + x2/2! + x3/3! + ...
+   Fazer um trecho de programa em "C" que lê um valor para x e calcula o valor de
+   ex. O valor deve ser calculado enquanto o termo calculado for maior que 10E-6.
 
 4. Exercício: fazer um programa em "C" que solicita o total gasto pelo cliente de
-uma loja, imprime as opções de pagamento, solicita a opção desejada e
-imprime o valor total das prestações (se houverem).
+   uma loja, imprime as opções de pagamento, solicita a opção desejada e
+   imprime o valor total das prestações (se houverem).
+
 1) Opção: a vista com 10% de desconto
 2) Opção: em duas vezes (preço da etiqueta)
 3) Opção: de 3 até 10 vezes com 3% de juros ao mês (somente para compras
-acima de R$ 100,00).
-OBS: fazer uma função que imprime as opções solicita a opção desejada e retorna
-a opção escolhida. No programa principal, testar a opção escolhida e ativar a
-função correspondente (uma função para cada opção).
+   acima de R$ 100,00).
+   OBS: fazer uma função que imprime as opções solicita a opção desejada e retorna
+   a opção escolhida. No programa principal, testar a opção escolhida e ativar a
+   função correspondente (uma função para cada opção).
 
   <h2> Grupo V - Ponteiros </h2>
 1. Procure determinar quais valores são impressos ao final deste programa.
@@ -179,102 +182,103 @@ caracteres e imprime:
 - Quantos caracteres são de pontuação;
 - Quantos caracteres são números;
 - Quantos caracteres são minúsculas.
-  
+
 2. Fazer um programa em "C" que lê um string contendo palavras separadas por
-um espaço em branco cada e as imprime uma abaixo das outras.
-  
+   um espaço em branco cada e as imprime uma abaixo das outras.
+
 3. Fazer um programa em "C" que lê um string do teclado e se utiliza de uma
-rotina recursiva para imprimir o string de maneira normal e de tráz para diante.
-  
+   rotina recursiva para imprimir o string de maneira normal e de tráz para diante.
+
 4. Fazer um programa em "C" que pregunta o nome, o endereço, o telefone e a
-idade de uma pessoa e monta um string com a seguinte frase:
-"Seu nome é ..., você tem ... anos, mora na rua ... e seu telefone é ... ."
-  
+   idade de uma pessoa e monta um string com a seguinte frase:
+   "Seu nome é ..., você tem ... anos, mora na rua ... e seu telefone é ... ."
+
 5. Fazer uma rotina que aguarda um string do teclado e retorna o valor 1 se o
-string digitado foi "SIM" e 0 se o string digitado foi "NAO". A rotina só deve
-retornar alguma coisa se o string digitado for "SIM" ou "NAO".
-  
+   string digitado foi "SIM" e 0 se o string digitado foi "NAO". A rotina só deve
+   retornar alguma coisa se o string digitado for "SIM" ou "NAO".
+
 6. Fazer uma rotina que recebe um string como parâmetro e imprime quantas
-palavras (separadas por espaços em branco) o mesmo contém.
+   palavras (separadas por espaços em branco) o mesmo contém.
 7. Implemente um rotina que faça a mesma coisa que a função "strcpy".
 8. Fazer um programa em "C" que solicita um número inteiro e soletra o mesmo
-na tela.
-Ex:
-124: um, dois, quatro
+   na tela.
+   Ex:
+   124: um, dois, quatro
 
 9. Fazer um programa em "C" que leia nomes de pessoas compostos por um pré-
-nome e um sobrenome separados por um espaço em branco e imprima:
+   nome e um sobrenome separados por um espaço em branco e imprima:
 
 - A lista de nomes em ordem alfabética do pré-nome;
 - A lista de nomes em ordem alfabética de sobrenomes;
 - O número médio de letras por nome.
-Obs:
-• a quantidade de nomes lidos deve ser menor ou igual a 20;
-• uma seqüência de nomes é encerrada pela palavra "FIM" ou quando for lido o
-20 nome.
-  
-10.Escrever uma função que recebe um string e um caracter como parâmetro e
-remove todas as ocorrências do caracter do string.
-  
-11.Escreva uma função em "C" que receba um string um caracter e o índice de
-uma posição do string como parâmetro e insira o caracter na posição
-"empurrando" todos os demais para o lado.
-  
-12.Fazer uma rotina em "C" que recebe um string como parâmetro e devolve o
-endereço do primeiro caracter branco encontrado.
+  Obs:
+  • a quantidade de nomes lidos deve ser menor ou igual a 20;
+  • uma seqüência de nomes é encerrada pela palavra "FIM" ou quando for lido o
+  20 nome.
 
-13.Fazer uma rotina que recebe como parâmetro um string contendo um número e
-um inteiro indicanndo a base na qual o número está expresso, retornando o seu
-valor em decimal
-Ex: conv2dec("345", 8) => 229
+  10.Escrever uma função que recebe um string e um caracter como parâmetro e
+  remove todas as ocorrências do caracter do string.
 
-  <h2> Grupo VIII - Passagem de parâmetros e estruturas </h2>
-  
+  11.Escreva uma função em "C" que receba um string um caracter e o índice de
+  uma posição do string como parâmetro e insira o caracter na posição
+  "empurrando" todos os demais para o lado.
+
+  12.Fazer uma rotina em "C" que recebe um string como parâmetro e devolve o
+  endereço do primeiro caracter branco encontrado.
+
+  13.Fazer uma rotina que recebe como parâmetro um string contendo um número e
+  um inteiro indicanndo a base na qual o número está expresso, retornando o seu
+  valor em decimal
+  Ex: conv2dec("345", 8) => 229
+
+    <h2> Grupo VIII - Passagem de parâmetros e estruturas </h2>
+
+
 1. Fazer uma função que retorna a soma, a diferença e o produto entre dois
-números.
+   números.
 
 2. Fazer uma função em "C" que retorna a razão entre dois números. A função
-deve retornar pelo comando return o valor 1 se a operação foi possível e o
-valor 0 se a operação não foi possível (divisão por zero, por exemplo). O
-resultado da divisão deve retonar por um parâmetro por referência.
+   deve retornar pelo comando return o valor 1 se a operação foi possível e o
+   valor 0 se a operação não foi possível (divisão por zero, por exemplo). O
+   resultado da divisão deve retonar por um parâmetro por referência.
 
 3. Fazer uma rotina em "C" que recebe um vetor de números inteiros como
-parâmetro onde todos os valores exceto o último são positivos e devolve:
-  - a média dos valores do vetor;
-  - o menor valor do vetor (sem considerar o último)
-  - o maior valor do vetor
+   parâmetro onde todos os valores exceto o último são positivos e devolve:
+
+- a média dos valores do vetor;
+- o menor valor do vetor (sem considerar o último)
+- o maior valor do vetor
 
 4. Fazer uma função para ler e retornar o valor das 3 notas de um aluno.
 
 5. Construir um programa em "C" que implementa uma agenda eletrônica. O
-programa deve ter um menu com as seguintes opções:
-• Entrar um novo nome na agenda.
-• Imprimir na tela os dados de uma das pessoas cadastradas (conforme
-solicitação).
-• Imprimir a lista de nomes cadastrados que comecem pela letra indicada.
-• Fim
-Cada entrada da agenda deve ter os seguintes campos:
-char nome[30];
-char endereco[100];
-char fone[10];
-long int CEP;
-Obs: a agenda deve ter capacidade para 100 entradas.
+   programa deve ter um menu com as seguintes opções:
+   • Entrar um novo nome na agenda.
+   • Imprimir na tela os dados de uma das pessoas cadastradas (conforme
+   solicitação).
+   • Imprimir a lista de nomes cadastrados que comecem pela letra indicada.
+   • Fim
+   Cada entrada da agenda deve ter os seguintes campos:
+   char nome[30];
+   char endereco[100];
+   char fone[10];
+   long int CEP;
+   Obs: a agenda deve ter capacidade para 100 entradas.
 
 6. Fazer um programa em "C" que lê uma lista de 20 produtos e e precós e
-armazêna-os em um array do tipo da estrutura abaixo. O programa deve, em
-seguida, ordenar o vetor em ordem alfabética de nome de produto e inflacionar
-os produtos cujo valor for menor que 100 em 5%. Por fim a lista de
-produtos/preços deve ser impressa.
-OBS: usar uma rotina que recebe uma estrutura do tipo PROD com parâmetro
-e atualiza o preço, uma que lê os dados para a estrutura do tipo PROD e outra
-capaz de imprimir a estrutura.
+   armazêna-os em um array do tipo da estrutura abaixo. O programa deve, em
+   seguida, ordenar o vetor em ordem alfabética de nome de produto e inflacionar
+   os produtos cujo valor for menor que 100 em 5%. Por fim a lista de
+   produtos/preços deve ser impressa.
+   OBS: usar uma rotina que recebe uma estrutura do tipo PROD com parâmetro
+   e atualiza o preço, uma que lê os dados para a estrutura do tipo PROD e outra
+   capaz de imprimir a estrutura.
 
 typedef struct
 {
 char nome[80];
 float preco;
-} PROD;
-7. Construir um programa em "C" que implementa uma agenda eletrônica. O
+} PROD; 7. Construir um programa em "C" que implementa uma agenda eletrônica. O
 programa deve ter um menu com as seguintes opções:
 1- Entrar um nome na agenda
 2- Imprimir na tela os dados de uma das pessoas cadastradas (consulta por

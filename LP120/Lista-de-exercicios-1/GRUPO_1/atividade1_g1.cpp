@@ -7,7 +7,8 @@ correspondente em decímetros, centímetros e milímetros.
 #include <iostream>
 using namespace std;
 
-int main() {
+int main()
+{
   float m, dm, cm, mm;
 
   cout << "Digite um valor do metro: ";
