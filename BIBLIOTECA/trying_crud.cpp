@@ -22,7 +22,7 @@ void cadastro_cliente();
 void menu_principal();
 void cadastro_livro();
 
-int main(void)
+int main(void) // função principal
 {
     menu_principal();
     cadastro_cliente();
