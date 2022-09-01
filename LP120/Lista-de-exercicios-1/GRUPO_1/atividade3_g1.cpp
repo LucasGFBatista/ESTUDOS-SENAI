@@ -13,8 +13,7 @@ int main()
     cin >> decimal;
 
     cout << "HEXADECIMAL: " << hex << decimal << endl;
-    cout << "OCTADECIMAL: " <<  oct << decimal << endl;
+    cout << "OCTADECIMAL: " << oct << decimal << endl;
 
-   
     return 0;
 }
