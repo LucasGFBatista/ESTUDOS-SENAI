@@ -14,6 +14,8 @@ de valores negativos. */
 #include <locale.h>
 using namespace std;
 
+char continuar;
+
 // chamar funções abaixo de main decladas
 void menu();
 int questaoA();
@@ -43,11 +45,15 @@ void menu()
     cout << "Escolha as questões";
     cout << "\nQuestão 1 (A)  \nQuestão 2 (B) \nQuestão 3 (C) \nQuestão 4 (D)\n";
     cin >> opcao;
+    system("cls");
 
     switch (opcao)
     {
     case 1:
-        questaoA();
+        do
+        {
+            questaoA();
+        } while (continuar == 's' || continuar == 'S');
         break;
     case 2:
         questaoB();
@@ -67,6 +73,9 @@ void menu()
 int questaoA()
 {
     int numero, soma = 0;
+
+    cout << "A - Escreva um algoritmo que lê 50 números inteiros e em seguida mostra a soma de todos os ímpares lidos.\n"; 
+
     for (int i = 0; i < 10; i++)
     {
         cout << "Digite o numero: ";
@@ -78,7 +87,10 @@ int questaoA()
         }
     }
 
-    cout << "A soma de todos os valores impares é: " << soma;
+    cout << "A soma de todos os valores impares é: " << soma << endl;
+    
+    cout << "Deseja continuar? ";
+    cin >> continuar;
 }
 
 // função que resolve a questão "B" da ativade
