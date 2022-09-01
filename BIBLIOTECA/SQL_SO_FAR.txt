@@ -1,0 +1,28 @@
+DROP TABLE IF EXISTS cliente;
+DROP TABLE IF EXISTS Livro;
+DROP TABLE IF EXISTS aluguel;
+
+
+CREATE TABLE cliente (
+id_cliente INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+nome_cliente VARCHAR(50) NOT NULL,
+cpf INT(14) NOT NULL,
+telefone  INT(12) NOT NULL,
+email VARCHAR(200) NOT NULL,
+data_nasc DATE NOT NULL,
+ativo  BOOL NOT NULL);
+
+CREATE TABLE Livro (
+id_livro INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+autor VARCHAR(50) NOT NULL,
+nome_livro VARCHAR(100) NOT NULL,
+ano_publicacao YEAR(4) NOT NULL);
+
+CREATE TABLE aluguel (
+id_aluguel INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+cliente INT NOT NULL,
+livro INT NOT NULL,
+data TIMESTAMP NOT NULL);
+
+ALTER TABLE aluguel ADD CONSTRAINT aluguel_cliente_cliente_id_cliente FOREIGN KEY (cliente) REFERENCES cliente(id_cliente);
+ALTER TABLE aluguel ADD CONSTRAINT aluguel_livro_Livro_id_livro FOREIGN KEY (livro) REFERENCES Livro(id_livro);
