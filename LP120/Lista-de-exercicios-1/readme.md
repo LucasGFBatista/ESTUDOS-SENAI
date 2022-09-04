@@ -2,15 +2,15 @@
 
 <h2> Grupo I - programa seqüênciais simples </h2>
 
-1. Fazer um programa em C que pergunta um valor em metros e imprime o
+1. [x] Fazer um programa em C que pergunta um valor em metros e imprime o
    correspondente em decímetros, centímetros e milímetros.
 
-2. Fazer um programa em C que imprime uma tabela com a tabuada de 1 a 9
+2. [x] Fazer um programa em C que imprime uma tabela com a tabuada de 1 a 9
 
-3. Fazer um programa que solicita um número decimal e imprime o
+3. [x] Fazer um programa que solicita um número decimal e imprime o
    correspondente em hexa e octal.
 
-4. Fazer um programa em "C" que pergunte um valor em graus Fahrenheit e
+4. [x] Fazer um programa em "C" que pergunte um valor em graus Fahrenheit e
    imprime no vídeo o correspondente em graus Celsius usando as fórmulas que
    seguem.
    a) Usar uma variável double para ler o valor em Fahrenheit e a fórmula
@@ -18,7 +18,7 @@
    b) Usar uma variável int para ler o valor em Fahrenheit e a fórmula
    C=(f-32)_(5/9).
 
-5. Fazer um programa em "C" que solicite 2 números e informe:
+5. [x] Fazer um programa em "C" que solicite 2 números e informe:
 
 - a) A soma dos números;
 - b) O produto do primeiro número pelo quadrado do segundo;
@@ -29,7 +29,7 @@
 
 <h2> Grupo II - explorando os comandos de controle de fluxo </h2>
 
-1. Faça um programa em "C" que lê dois valores e imprime:
+1. [x] Faça um programa em "C" que lê dois valores e imprime:
 
 - se o primeiro valor for menor que o segundo, a lista de valores do primeiro até
   o segundo;
@@ -37,7 +37,7 @@
   o primeiro em ordem decrescente;
 - se ambos forem iguais a mensagem "valores iguais".
 
-2. Fazer um programa que imprime a tabela ASCII (código decimal, código hexa,
+2. [x] Fazer um programa que imprime a tabela ASCII (código decimal, código hexa,
    caracter) para os códigos de 0 a 127.
 
 3. Fazer um programa em "C" que lê o preço de um produto e inflaciona esse

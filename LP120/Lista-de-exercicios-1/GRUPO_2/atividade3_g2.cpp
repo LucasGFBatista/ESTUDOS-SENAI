@@ -1,28 +1,44 @@
-/* Fazer um programa em "C" que lê o preço de um produto e inflaciona esse preço em 10% se ele for menor que 100 e em 20% se ele for maior ou igual a 100
-
-OBS: não use o comando "if" ou o operador de condição "?".
+/*
+Fazer um programa que lê um valor, um operador (+,-,*,/) e outro valor e imprime o resultado da expressão: <valor 1> <valor 2>
 */
 
 #include <iostream>
 #include <locale.h>
 using namespace std;
-int main(){
-    setlocale(LC_ALL, "Portuguese");
 
-    float preco, preco_inflacionado;
-    
+int main()
+{
+    char operador;
+    float num1, num2, resultado;
 
-    cout << "Digite o valor do produto R$";
-    cin >> preco;
+    cout << "Insira os valor a ser calculado: ";
+    cin >> num1;
+    cout << "Insira os valor a ser calculado: ";
+    cin >> num1;
+    cout << "Qual operador? ";
+    cin >> operador;
 
-    if(preco < 100){
-        preco_inflacionado = preco + (preco * 0.1);
-
-        cout << "O preço inflacionado é R$" << preco_inflacionado;
-    } else {
-          preco_inflacionado = preco + (preco * 0.2);
-
-        cout << "O preço inflacionado é R$" << preco_inflacionado;
+    switch (operador)
+    {
+    case "+":
+        resultado = num1 + num2;
+        cout << resultado;
+        break;
+    case '-':
+        resultado = num1 - num2;
+        cout << resultado;
+        break;
+    case '*':
+        resultado = num1 * num2;
+        cout << resultado;
+        break;
+    case '/':
+        resultado = num1 / num2;
+        cout << resultado;
+        break;
+    default:
+        cout << "Operador invalido!";
+        break;
     }
 
     return 0;
