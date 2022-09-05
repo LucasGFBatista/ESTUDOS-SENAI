@@ -112,3 +112,28 @@ void cadastro_livro() // função cadastro de livros
 
     } while (opcao == 's' || opcao == 'S');
 }
+
+void pesquisa()
+{
+    int cpfPesquisa, opcao_pesquisa;
+    char emailPesquisa;
+
+    do
+    {
+        cout << "1 - Pesquisar por CPF \n2 - Pesquisar por e-mail";
+        cin >> opcao_pesquisa;
+
+        for (int i = 0; i < lista_tamanho; i++)
+        {
+            if (cpf[i] == cpfPesquisa)
+            {
+                cout << "\n"
+                     << nome << "\n"
+                     << email << "\n"
+                     << cpf;
+            }
+        }
+
+        cout << "Deseja realizar uma nova pesquisa? ";
+    } while (opcao == 's' || opcao == 'S');
+}
