@@ -113,27 +113,53 @@ void cadastro_livro() // função cadastro de livros
     } while (opcao == 's' || opcao == 'S');
 }
 
-void pesquisa()
+void pesquisa() // função pesquisa por cpf e email
 {
-    int cpfPesquisa, opcao_pesquisa;
+    int i, cpfPesquisa, opcao_pesquisa;
     char emailPesquisa;
+    bool ok;
 
     do
     {
         cout << "1 - Pesquisar por CPF \n2 - Pesquisar por e-mail";
         cin >> opcao_pesquisa;
 
-        for (int i = 0; i < lista_tamanho; i++)
+        if (ok = !cin.fail())
         {
-            if (cpf[i] == cpfPesquisa)
+            
+            switch (opcao_pesquisa)
             {
-                cout << "\n"
-                     << nome << "\n"
-                     << email << "\n"
-                     << cpf;
+            case 1:
+                for (i = 0; i < lista_tamanho; i++)
+                {
+                    if (cpf[i] == cpfPesquisa)
+                    {
+                        cout << "\n"
+                             << nome << "\n"
+                             << email << "\n"
+                             << cpf;
+                    }
+                }
+
+                break;
+            case 2:
+                for (i = 0; i < lista_tamanho; i++)
+                {
+                    if (email[i] == emailPesquisa)
+                    {
+                        cout << "\n"
+                             << nome << "\n"
+                             << email << "\n"
+                             << cpf;
+                    }
+                }
+            default:
+                system("cls");
+                cout << "Opção não existente!";
+                ok = false;
+                 break;
             }
         }
-
         cout << "Deseja realizar uma nova pesquisa? ";
     } while (opcao == 's' || opcao == 'S');
 }
