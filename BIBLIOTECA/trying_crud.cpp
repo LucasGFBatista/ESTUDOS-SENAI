@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <iomanip>
+#include <cstring>
 using namespace std;
 
 char opcao; // continuar cadastro (s/n)
@@ -21,12 +22,14 @@ int ano_publicacao[4];
 void cadastro_cliente();
 void menu_principal();
 void cadastro_livro();
+void pesquisa();
 
 int main(void) // função principal
 {
     menu_principal();
     cadastro_cliente();
     cadastro_livro();
+    pesquisa();
 
     return 0;
 }
@@ -82,7 +85,7 @@ void cadastro_cliente() // função cadastro de clientes
         cout << "\nDigite CPF: ";
         cin >> cpf[linha];
 
-        cout << "Deseja continuar? ";
+        cout << "Deseja continuar? (S/N) ";
         cin >> opcao;
         linha++;
         system("cls");
@@ -105,7 +108,7 @@ void cadastro_livro() // função cadastro de livros
         cout << "\nDigite ano de publicação: ";
         cin >> ano_publicacao[linha];
 
-        cout << "Deseja continuar? ";
+        cout << "Deseja continuar? (S/N) ";
         cin >> opcao;
         linha++;
         system("cls");
@@ -115,51 +118,54 @@ void cadastro_livro() // função cadastro de livros
 
 void pesquisa() // função pesquisa por cpf e email
 {
-    int i, cpfPesquisa, opcao_pesquisa;
+    int cpfPesquisa, opcao_pesquisa;
     char emailPesquisa;
     bool ok;
 
     do
     {
-        cout << "1 - Pesquisar por CPF \n2 - Pesquisar por e-mail";
+        cout << "1 - Pesquisar por CPF \n2 - Pesquisar por e-mail\n";
         cin >> opcao_pesquisa;
 
-        if (ok = !cin.fail())
+        switch (opcao_pesquisa)
         {
-            
-            switch (opcao_pesquisa)
+        case 1:
+            cout << "Digite o CPF: ";
+            cin >> cpfPesquisa;
+            for (int i = 0; i < lista_tamanho; i++)
             {
-            case 1:
-                for (i = 0; i < lista_tamanho; i++)
+                if (cpf[i] == cpfPesquisa)
                 {
-                    if (cpf[i] == cpfPesquisa)
-                    {
-                        cout << "\n"
-                             << nome << "\n"
-                             << email << "\n"
-                             << cpf;
-                    }
+                    cout << "\n"
+                         << nome << "\n"
+                         << email << "\n"
+                         << cpf;
                 }
-
-                break;
-            case 2:
-                for (i = 0; i < lista_tamanho; i++)
-                {
-                    if (email[i] == emailPesquisa)
-                    {
-                        cout << "\n"
-                             << nome << "\n"
-                             << email << "\n"
-                             << cpf;
-                    }
-                }
-            default:
-                system("cls");
-                cout << "Opção não existente!";
-                ok = false;
-                 break;
             }
+
+            break;
+       /* case 2:
+            cout << "Digite o E-mail: ";
+            cin >> emailPesquisa;
+            for (int j = 0; j < lista_tamanho; j++)
+            {
+                if (strcmp(email[j] emailPesquisa))
+                {
+                    cout << "\n"
+                         << nome << "\n"
+                         << email << "\n"
+                         << cpf;
+                }
+            }
+
+            */
+        default:
+            system("cls");
+            cout << "Opção inválida.";
+            break;
         }
-        cout << "Deseja realizar uma nova pesquisa? ";
+
+        cout << "Deseja realizar uma nova pesquisa? (S/N) ";
+        cin >> opcao;
     } while (opcao == 's' || opcao == 'S');
 }
