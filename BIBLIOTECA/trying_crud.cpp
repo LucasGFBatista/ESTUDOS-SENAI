@@ -3,33 +3,39 @@
 #include <iostream>
 #include <iomanip>
 #include <cstring>
+#include <ctime>
+
 using namespace std;
 
 char opcao; // continuar cadastro (s/n)
 
 // variaveis clientes
-const int lista_tamanho = 5;
+const int lista_tamanho = 200;
+
 char nome[lista_tamanho][50];
-char email[lista_tamanho][50];
 int cpf[lista_tamanho];
+char email[lista_tamanho][50];
+int telefone[lista_tamanho];
 
 // variaveis livros
 char nome_livro[lista_tamanho][50];
 char nome_autor[lista_tamanho][50];
-int ano_publicacao[4];
+int ano_publicacao[lista_tamanho];
 
 // chamar funções presentes no codigo
 void cadastro_cliente();
 void menu_principal();
 void cadastro_livro();
-void pesquisa();
+void pesquisa_cliente();
+void lista_cliente();
 
 int main(void) // função principal
 {
     menu_principal();
     cadastro_cliente();
     cadastro_livro();
-    pesquisa();
+    pesquisa_cliente();
+    lista_cliente();
 
     return 0;
 }
@@ -42,8 +48,7 @@ void menu_principal() // função menu
     do
     {
         cout << "*****************************\n";
-        cout << "1 - CADASTRO DE CLIENTE\n2 - CADASTRO DE LIVROS\n";
-        cout << "3 - PESQUISAR CLIENTE\n4 - PESQUISAR LIVRO\n";
+        cout << "1 - CADASTRO DE CLIENTE\n2 - CADASTRO DE LIVROS\n3 - PESQUISAR CLIENTE\n4 - PESQUISAR LIVRO\n";
         cout << "*****************************\n";
         cout << "DIGITE OPÇÃO DA TAREFA: ";
         cin >> opcao_menu;
@@ -59,6 +64,12 @@ void menu_principal() // função menu
             case 2:
                 system("cls");
                 cadastro_livro();
+            case 3:
+            	system("cls");
+            	pesquisa_cliente();
+            case 4:
+            	system("cls");
+            	
             default:
                 system("cls");
                 cout << "\nOpção inválida\n";
@@ -80,16 +91,23 @@ void cadastro_cliente() // função cadastro de clientes
 
         cout << "\nDigite nome: ";
         cin >> nome[linha];
-        cout << "\nDigite email: ";
-        cin >> email[linha];
         cout << "\nDigite CPF: ";
         cin >> cpf[linha];
+        cout << "\nDigite o telefone: ";
+        cin >> telefone[linha];
+        cout << "\nDigite email: ";
+        cin >> email[linha];
 
-        cout << "Deseja continuar? (S/N) ";
+
+        cout << "\Deseja continuar? (S/N) ";
         cin >> opcao;
         linha++;
         system("cls");
-
+        
+        if(opcao != 's' || opcao != 'S'){
+        	menu_principal();
+		}
+	
     } while (opcao == 's' || opcao == 'S');
 }
 
@@ -112,11 +130,15 @@ void cadastro_livro() // função cadastro de livros
         cin >> opcao;
         linha++;
         system("cls");
+        
+        if(opcao != 's' || opcao != 'S'){
+        	menu_principal();
+		}
 
     } while (opcao == 's' || opcao == 'S');
 }
 
-void pesquisa() // função pesquisa por cpf e email
+void pesquisa_cliente() // função pesquisa cliente por cpf e email
 {
     int cpfPesquisa, opcao_pesquisa;
     char emailPesquisa;
@@ -124,6 +146,7 @@ void pesquisa() // função pesquisa por cpf e email
 
     do
     {
+    	cout << "PESQUISAR CLIENTE\n\n";
         cout << "1 - Pesquisar por CPF \n2 - Pesquisar por e-mail\n";
         cin >> opcao_pesquisa;
 
@@ -137,35 +160,55 @@ void pesquisa() // função pesquisa por cpf e email
                 if (cpf[i] == cpfPesquisa)
                 {
                     cout << "\n"
-                         << nome << "\n"
-                         << email << "\n"
-                         << cpf;
+                        << "NOME: " << nome[i] << "\n" 
+                        << "CPF: " << cpf[i]
+                        << "E-MAIL: " << email[i] << "\n";
                 }
             }
 
             break;
-       /* case 2:
+     /*  case 2:
             cout << "Digite o E-mail: ";
             cin >> emailPesquisa;
             for (int j = 0; j < lista_tamanho; j++)
             {
-                if (strcmp(email[j] emailPesquisa))
+                if (strcmp(email[j] == emailPesquisa) = 0)
                 {
                     cout << "\n"
-                         << nome << "\n"
-                         << email << "\n"
-                         << cpf;
+                         << nome[j] << "\n"
+                         << email[j] << "\n"
+                         << cpf[j];
                 }
             }
-
             */
+            
         default:
             system("cls");
             cout << "Opção inválida.";
             break;
         }
 
-        cout << "Deseja realizar uma nova pesquisa? (S/N) ";
+        cout << "\nDeseja realizar uma nova pesquisa? (S/N) ";
         cin >> opcao;
+        system("cls");
+        
+        if(opcao != 's' || opcao != 'S'){
+        	menu_principal();
+		}
+        
     } while (opcao == 's' || opcao == 'S');
+}
+
+void lista_cliente(){
+	
+	for(int i = 0; i < lista_tamanho; i++){
+		if(cpf[i] > 0){
+			cout << "\n"
+                << nome[i] << "\n"
+                << email[i] << "\n"
+                << cpf[i];
+			
+		}
+	}
+	
 }
