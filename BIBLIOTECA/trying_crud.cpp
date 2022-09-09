@@ -34,25 +34,17 @@ void cadastro_livro();
 int main(void) // função principal
 {
     menu_principal();
-<<<<<<< HEAD
 
     //cliente funções
-=======
-    
->>>>>>> pesquisa
     cadastro_cliente();
     pesquisa_cliente();
     lista_cliente();
 
-<<<<<<< HEAD
     //livro funções
     cadastro_livro();
     //pesquisa_livro();
     //lista_livros();
     
-=======
-    cadastro_livro();
->>>>>>> pesquisa
 
     return 0;
 }
@@ -255,8 +247,6 @@ void pesquisa_livro(){
 
     cout << "PESQUISAR LIVRO\n\n"
 
-<<<<<<< HEAD
-=======
 void lista_cliente(){
 	
 	for(int i = 0; i < lista_tamanho; i++){
@@ -268,5 +258,4 @@ void lista_cliente(){
 		}
 	}
 	
->>>>>>> pesquisa
 }
