@@ -48,7 +48,8 @@ void menu_principal() // função menu
     do
     {
         cout << "*****************************\n";
-        cout << "1 - CADASTRO DE CLIENTE\n2 - CADASTRO DE LIVROS\n3 - PESQUISAR CLIENTE\n4 - PESQUISAR LIVRO\n";
+        cout << "1 - CADASTRO DE CLIENTE\n2 - PESQUISAR CLIENTE\n3 - LISTA DE CLIENTES"
+			<< "\n4 - CADASTRO DE LIVRO\n5 - PESQUISAR LIVRO\n6 - LISTA DE LIVROS\n";
         cout << "*****************************\n";
         cout << "DIGITE OPÇÃO DA TAREFA: ";
         cin >> opcao_menu;
@@ -62,13 +63,21 @@ void menu_principal() // função menu
                 cadastro_cliente();
                 break;
             case 2:
-                system("cls");
-                cadastro_livro();
-            case 3:
             	system("cls");
             	pesquisa_cliente();
+            case 3:
+                system("cls");
+                lista_cliente();	
             case 4:
             	system("cls");
+            	cadastro_livro();            	
+            case 5:
+            	system("cls");
+            	//pesquisa_livro();
+            case 6:
+            	system("cls");
+            	//lista_livros();
+            	
             	
             default:
                 system("cls");
@@ -149,6 +158,7 @@ void pesquisa_cliente() // função pesquisa cliente por cpf e email
     	cout << "PESQUISAR CLIENTE\n\n";
         cout << "1 - Pesquisar por CPF \n2 - Pesquisar por e-mail\n";
         cin >> opcao_pesquisa;
+        system("cls");
 
         switch (opcao_pesquisa)
         {
@@ -161,7 +171,8 @@ void pesquisa_cliente() // função pesquisa cliente por cpf e email
                 {
                     cout << "\n"
                         << "NOME: " << nome[i] << "\n" 
-                        << "CPF: " << cpf[i]
+                        << "CPF: " << cpf[i] << "\n"
+                        << "TELEFONE: " << telefone[i] << "\n"
                         << "E-MAIL: " << email[i] << "\n";
                 }
             }
@@ -174,10 +185,11 @@ void pesquisa_cliente() // função pesquisa cliente por cpf e email
             {
                 if (strcmp(email[j] == emailPesquisa) = 0)
                 {
-                    cout << "\n"
-                         << nome[j] << "\n"
-                         << email[j] << "\n"
-                         << cpf[j];
+ 						cout << "\n"
+                        << "NOME: " << nome[i] << "\n" 
+                        << "CPF: " << cpf[i] << "\n"
+                        << "TELEFONE: " << telefone[i] << "\n"
+                        << "E-MAIL: " << email[i] << "\n";
                 }
             }
             */
@@ -203,11 +215,11 @@ void lista_cliente(){
 	
 	for(int i = 0; i < lista_tamanho; i++){
 		if(cpf[i] > 0){
-			cout << "\n"
-                << nome[i] << "\n"
-                << email[i] << "\n"
-                << cpf[i];
-			
+			 cout << "\n"
+                        << "NOME: " << nome[i] << "\n" 
+                        << "CPF: " << cpf[i] << "\n"
+                        << "TELEFONE: " << telefone[i] << "\n"
+                        << "E-MAIL: " << email[i] << "\n";
 		}
 	}
 	
