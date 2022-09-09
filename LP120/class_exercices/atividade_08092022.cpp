@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+
+
 void cadastroUsuario();
 
 int main()
@@ -15,6 +17,9 @@ int main()
     cin >> nomeUsuario;
     cout << "Digite uma senha: ";
     scanf("%c", &senha);
+=======
+    cin >> senha;
+
 
     //system("pause");
 
