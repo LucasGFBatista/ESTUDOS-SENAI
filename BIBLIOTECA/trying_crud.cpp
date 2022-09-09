@@ -32,15 +32,22 @@ void lista_cliente();
 int main(void) // função principal
 {
     menu_principal();
+
+    //cliente funções
     cadastro_cliente();
-    cadastro_livro();
     pesquisa_cliente();
     lista_cliente();
+
+    //livro funções
+    cadastro_livro();
+    //pesquisa_livro();
+    //lista_livros();
+    
 
     return 0;
 }
 
-void menu_principal() // função menu
+void menu_principal() // função menu principal
 {
     int opcao_menu;
     bool ok;
@@ -89,6 +96,8 @@ void menu_principal() // função menu
     } while (!ok);
 }
 
+/*------------------- funções cliente ------------------*/
+
 void cadastro_cliente() // função cadastro de clientes
 
 {
@@ -120,32 +129,6 @@ void cadastro_cliente() // função cadastro de clientes
     } while (opcao == 's' || opcao == 'S');
 }
 
-void cadastro_livro() // função cadastro de livros
-{
-    static int linha;
-
-    do
-    {
-        cout << "CADASTRO DE LIVROS\n\n";
-
-        cout << "\nDigite nome do livro: ";
-        cin >> nome_livro[linha];
-        cout << "\nDigite nome do autor: ";
-        cin >> nome_autor[linha];
-        cout << "\nDigite ano de publicação: ";
-        cin >> ano_publicacao[linha];
-
-        cout << "Deseja continuar? (S/N) ";
-        cin >> opcao;
-        linha++;
-        system("cls");
-        
-        if(opcao != 's' || opcao != 'S'){
-        	menu_principal();
-		}
-
-    } while (opcao == 's' || opcao == 'S');
-}
 
 void pesquisa_cliente() // função pesquisa cliente por cpf e email
 {
@@ -223,4 +206,43 @@ void lista_cliente(){
 		}
 	}
 	
+}
+
+/*--------------------- funções livros --------------------*/
+
+void cadastro_livro() // função cadastro de livros
+{
+    static int linha;
+
+    do
+    {
+        cout << "CADASTRO DE LIVROS\n\n";
+
+        cout << "\nDigite nome do livro: ";
+        cin >> nome_livro[linha];
+        cout << "\nDigite nome do autor: ";
+        cin >> nome_autor[linha];
+        cout << "\nDigite ano de publicação: ";
+        cin >> ano_publicacao[linha];
+
+        cout << "Deseja continuar? (S/N) ";
+        cin >> opcao;
+        linha++;
+        system("cls");
+        
+        if(opcao != 's' || opcao != 'S'){
+        	menu_principal();
+		}
+
+    } while (opcao == 's' || opcao == 'S');
+}
+
+
+
+void pesquisa_livro(){
+
+    int opcaoPesquisa;
+
+    cout << "PESQUISAR LIVRO\n\n"
+
 }
