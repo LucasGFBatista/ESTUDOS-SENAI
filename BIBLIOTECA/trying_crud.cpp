@@ -168,7 +168,7 @@ void pesquisa_cliente() // função pesquisa cliente por cpf e email
             cin >> emailPesquisa;
             for (int j = 0; j < lista_tamanho; j++)
             {
-                if (strcmp(email[j] == emailPesquisa) = 0)
+                if (strcmp(email[j],emailPesquisa) == 0)
                 {
  						cout << "\n"
                         << "NOME: " << nome[i] << "\n" 
