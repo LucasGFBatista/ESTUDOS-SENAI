@@ -17,53 +17,53 @@ o percentual correspondente de votos válidos do aluno B em relação à quantid
 #include <string.h>
 
 using namespace std;
+float perValidosTotal, perValidosA, perValidosB, perValidosC, perNulos, perBrancos;
+int somaVotos, votosValidos, votosInvalidos;
+int candidatoA, candidatoB, candidatoC, nulo, branco;
+int qntTotal = 0;
+
+void menu();
+void pseudoUrna();
+void resultado();
+void oqueEraPraSerFeito();
 
 int main()
 {
-    float perValidosTotal, perValidosA, perValidosB, perValidosC, perNulos, perBrancos;
-    int somaVotos, votosValidos, votosInvalidos;
+    menu();
+    pseudoUrna();
+    oqueEraPraSerFeito();
+    resultado();
 
-    // calcular a quantidade de votos
-    int qntTotal = 0;
-    int candidatoA, candidatoB, candidatoC, nulo, branco;
+    return 0;
+}
 
-    /*
+void menu()
+{
 
-        // o nome da variavel é auto explicativa
-        int opcaoVoto;
-        char repetir;
+    int opcao;
 
-        do
-        {
-            cout << "1 - Candidato A\n 2 - Candidato B\n 3 - Candidato C\n 4 - Branco\n";
-            cin >> opcaoVoto;
+    cout << "ESCOLHA UMA OPCAO: ";
+    cout << "1 - O que foi pedido\n2 - Pseudo Urna";
+    cin >> opcao;
 
-            switch (opcaoVoto)
-            {
-            case 1:
-                candidatoA++;
-                break;
-            case 2:
-                candidatoB++;
-                break;
-            case 3:
-                candidatoC++;
-                break;
-            case 4:
-                branco++;
-                break;
-            default:
-                nulo++;
-                break;
-            }
-            qntTotal++;
+    switch (opcao)
+    {
+    case 1:
+        oqueEraPraSerFeito();
+        system("cls");
+        break;
+    case 2:
+        pseudoUrna();
+        system("cls");
+    default:
+        menu();
+        system("cls");
+        break;
+    }
+}
 
-            cout << "\n\nDeseja continuar a votação? (S/N) ";
-            cin >> repetir;
-            system("cls");
-
-        } while (repetir == 's' || repetir == 'S');
-        */
+void oqueEraPraSerFeito()
+{
 
     cout << "Digite a quantidade de candidato A: ";
     cin >> candidatoA;
@@ -76,6 +76,51 @@ int main()
     cout << "Digite a quantidade de nulo: ";
     cin >> nulo;
 
+    return resultado();
+}
+
+void pseudoUrna()
+{
+
+    int opcaoVoto;
+    char repetir;
+
+    do
+    {
+        cout << "1 - Candidato A\n 2 - Candidato B\n 3 - Candidato C\n 4 - Branco\n";
+        cin >> opcaoVoto;
+
+        switch (opcaoVoto)
+        {
+        case 1:
+            candidatoA++;
+            break;
+        case 2:
+            candidatoB++;
+            break;
+        case 3:
+            candidatoC++;
+            break;
+        case 4:
+            branco++;
+            break;
+        default:
+            nulo++;
+            break;
+        }
+        qntTotal++;
+
+        cout << "\n\nDeseja continuar a votação? (S/N) ";
+        cin >> repetir;
+        system("cls");
+
+    } while (repetir == 's' || repetir == 'S');
+
+    return resultado();
+}
+
+void resultado()
+{
 
     somaVotos = candidatoA + candidatoB + candidatoC + nulo, branco;
     votosValidos = candidatoA + candidatoB + candidatoC;
@@ -89,8 +134,6 @@ int main()
     perNulos = (qntTotal / nulo) * 100;
     perBrancos = (qntTotal / branco) * 100;
 
-
-
     cout << "TOTAL DE VOTOS: " << somaVotos << " teste " << qntTotal << endl;
     cout << "TOTAL DE VOTOS VALIDOS: " << votosValidos << endl;
     cout << "TOTAL DE VOTOS INVALIDOS: " << votosInvalidos << endl;
@@ -99,6 +142,4 @@ int main()
     cout << "PORCETAGEM DE VOTOS CANDIDATO A: " << perValidosC << endl;
     cout << "PORCETAGEM DE VOTOS CANDIDATO A: " << perNulos << endl;
     cout << "PORCETAGEM DE VOTOS CANDIDATO A: " << perBrancos << endl;
-
-    return 0;
 }
