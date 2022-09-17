@@ -17,6 +17,7 @@ o percentual correspondente de votos válidos do aluno B em relação à quantid
 #include <string.h>
 
 using namespace std;
+
 float perValidosTotal, perValidosA, perValidosB, perValidosC, perNulos, perBrancos;
 int somaVotos, votosValidos, votosInvalidos;
 int candidatoA, candidatoB, candidatoC, nulo, branco;
@@ -24,7 +25,6 @@ int qntTotal = 0;
 
 void menu();
 void pseudoUrna();
-void resultado();
 void oqueEraPraSerFeito();
 
 int main()
@@ -32,7 +32,6 @@ int main()
     menu();
     pseudoUrna();
     oqueEraPraSerFeito();
-    resultado();
 
     return 0;
 }
@@ -42,8 +41,8 @@ void menu()
 
     int opcao;
 
-    cout << "ESCOLHA UMA OPCAO: ";
-    cout << "1 - O que foi pedido\n2 - Pseudo Urna";
+    cout << "ESCOLHA UMA OPCAO: \n";
+    cout << "1 - O que foi pedido\n2 - Pseudo Urna\n";
     cin >> opcao;
 
     switch (opcao)
@@ -76,7 +75,26 @@ void oqueEraPraSerFeito()
     cout << "Digite a quantidade de nulo: ";
     cin >> nulo;
 
-    return resultado();
+    somaVotos = candidatoA + candidatoB + candidatoC + nulo, branco;
+    votosValidos = candidatoA + candidatoB + candidatoC;
+    votosInvalidos = nulo + branco;
+
+    // calculos porcetengaem
+    perValidosTotal = (votosValidos / qntTotal) * 100;
+    perValidosA = (votosValidos / candidatoA) * 100;
+    perValidosB = (votosValidos / candidatoB) * 100;
+    perValidosC = (votosValidos / candidatoC) * 100;
+    perNulos = (qntTotal / nulo) * 100;
+    perBrancos = (qntTotal / branco) * 100;
+
+    cout << "TOTAL DE VOTOS: " << somaVotos << " teste " << qntTotal << endl;
+    cout << "TOTAL DE VOTOS VALIDOS: " << votosValidos << endl;
+    cout << "TOTAL DE VOTOS INVALIDOS: " << votosInvalidos << endl;
+    cout << "PORCETAGEM DE VOTOS CANDIDATO A: " << perValidosA << endl;
+    cout << "PORCETAGEM DE VOTOS CANDIDATO A: " << perValidosB << endl;
+    cout << "PORCETAGEM DE VOTOS CANDIDATO A: " << perValidosC << endl;
+    cout << "PORCETAGEM DE VOTOS CANDIDATO A: " << perNulos << endl;
+    cout << "PORCETAGEM DE VOTOS CANDIDATO A: " << perBrancos << endl;
 }
 
 void pseudoUrna()
@@ -115,12 +133,6 @@ void pseudoUrna()
         system("cls");
 
     } while (repetir == 's' || repetir == 'S');
-
-    return resultado();
-}
-
-void resultado()
-{
 
     somaVotos = candidatoA + candidatoB + candidatoC + nulo, branco;
     votosValidos = candidatoA + candidatoB + candidatoC;
