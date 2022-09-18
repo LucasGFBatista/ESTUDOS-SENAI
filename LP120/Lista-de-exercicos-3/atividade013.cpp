@@ -20,7 +20,7 @@ int main()
 
     float media, nota, soma;
     bool repetir = 1;
-    int humor = 0;
+    int piadaRuim = 0;
     int opcao;
 
     do
@@ -45,11 +45,11 @@ int main()
             break;
         default: // piadinha de pessimo gosto
             system("cls");
-            while (humor <= 4)
+            while (piadaRuim <= 4)
             {
-                humor++;
+                piadaRuim++;
 
-                switch (humor)
+                switch (piadaRuim)
                 {
                 case 1:
                     cout << "\nSo tem duas opcoes, nem eh dificil de enteder isso!\n\n\n";
@@ -70,7 +70,7 @@ int main()
                 break;
             }
         }
-    } while (repetir == 0 && humor < 4);
+    } while (repetir == 0 && piadaRuim < 4);
 
     return 0;
 }
