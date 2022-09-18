@@ -10,15 +10,23 @@ d) A idade e o sexo da pessoa que possui o menor salário;
 Finalize a entrada de dados ao ser digitada uma idade negativa.
 */
 
+/*
+acho que vai dar errado, mas vou tentar fazer orientado a objetos. Se der certo... reeeeeeeee
+
+*/
+
 #include <iostream>
 #include <cmath>
 #include <locale.h>
+#include <string>
 
 using namespace std;
 
 int main()
 {
     setlocale(LC_ALL,"");
+
+    
 
 
     return 0;
