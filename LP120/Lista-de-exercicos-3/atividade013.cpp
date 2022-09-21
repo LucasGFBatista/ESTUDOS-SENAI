@@ -52,13 +52,13 @@ int main()
                 switch (piadaRuim)
                 {
                 case 1:
-                    cout << "\nSo tem duas opcoes, nem eh dificil de enteder isso!\n\n\n";
+                    cout << "\nVoce só tem mais 3 tentativas!\n";
                     break;
                 case 2:
-                    cout << "\nPorra, vei! São apenas duas opcoes!\n";
+                    cout << "\nVoce só tem mais 2 tentativas!\\n";
                     break;
                 case 3:
-                    cout << "\nDisgraca, vei! Deixa de ser burro e escolhe uma das opcoes!\n";
+                    cout << "\nVoce só tem mais 1 tentativas!\\n";
                     break;
 
                 default:
