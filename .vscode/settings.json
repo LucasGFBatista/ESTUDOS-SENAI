@@ -7,7 +7,15 @@
     "random": "cpp",
     "istream": "cpp",
     "limits": "cpp",
-    "numeric": "cpp"
+    "numeric": "cpp",
+    "fstream": "cpp",
+    "ostream": "cpp",
+    "shared_mutex": "cpp",
+    "system_error": "cpp",
+    "regex": "cpp",
+    "typeindex": "cpp",
+    "typeinfo": "cpp",
+    "variant": "cpp"
   },
   "C_Cpp_Runner.cCompilerPath": "gcc",
   "C_Cpp_Runner.cppCompilerPath": "g++",
