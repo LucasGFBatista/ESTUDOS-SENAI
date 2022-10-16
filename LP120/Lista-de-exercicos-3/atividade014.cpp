@@ -1,99 +1,142 @@
 /*
-14. Exercício - comando while
 Foi feita uma pesquisa entre os habitantes de uma região. Foram
 coletados os dados de idade,
-sexo (M/F) e salário. Faça um Código fonte que calcule e mostre:
+sexo (M/F) e salário. Faça um programa que calcule e mostre:
 a) A média dos salários do grupo;
 b) A maior e a menor idade do grupo;
 c) A quantidade de mulheres na região;
 d) A idade e o sexo da pessoa que possui o menor salário;
-Finalize a entrada de dados ao ser digitada uma idade negativa.
 */
 
-/*
-acho que vai dar errado, mas vou tentar fazer orientado a objetos. Se der certo... reeeeeeeee
-*/
-#include <iostream>
-#include <cmath>
-#include <locale.h>
-#include <string>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 struct Entrevistado
 {
-    int codigo;
-    string nome;
+    // int codigo;
+    // char nome[100];
     int idade;
     char genero;
     float salario;
-
-    void insere(string stnome, int stidade, char stgenero, float stsalario)
-    {
-
-        nome = stnome;
-        idade = stidade;
-        genero = stgenero;
-        salario = stsalario;
-    }
-
-    void mostra()
-    {
-        cout << "Nome : " << nome << endl;
-        cout << "Idade: " << idade << endl;
-        cout << "Genero: " << genero << endl;
-        cout << "Salario: " << salario << endl;
-    }
 };
 
+/*
+void cadastro(int quantidade, Entrevistado pessoa[])
+{
+    int qtd_mulheres = 0;
 
+    for (int i = 0; i < quantidade; i++)
+    {
+        cout << "\nEntrevistado " << i + 1 << endl;
+        // cout << "Digite o nome: ";
+        // cin >> pessoa[quantidade].nome;
+        cout << "Digite o genero: ";
+        cin >> pessoa[i].genero;
+        cout << "Digite a idade: ";
+        cin >> pessoa[i].idade;
+        cout << "Digite o salario: ";
+        cin >> pessoa[i].salario;
 
-void cadastro();
+        if (pessoa[i].genero == 'F')
+
+        {
+            qtd_mulheres++;
+        }
+    }
+}
+*/
+
+float calculo(char genero, int quantidade, Entrevistado pessoa[])
+{
+
+    float total = 0;
+    int i;
+    int total_genero = 0;
+
+    for (i = 0; i < quantidade; i++)
+    {
+        if (pessoa[i].genero == genero)
+        {
+            total += pessoa[i].salario;
+            total_genero++;
+        }
+    }
+
+    return (float)total / total_genero;
+}
 
 int main()
 {
-    setlocale(LC_ALL, "");
+    int qtd_mulheres = 0;
     int quantidade;
+    Entrevistado pessoa[500];
+    char genero;
+    char generoMenorSal;
+    int menorIdade = 999;
+    int maiorIdade = 0;
+    int idadeMenorSalario = 999;
+    float menorSalario = 0.1;
 
-    
+    cout << "Digite a quantidade de pessoas: ";
+    cin >> quantidade;
 
-    cadastro(quantidade, Entrevistado);
+    for (int i = 0; i < quantidade; i++)
+    {
+        cout << "\nEntrevistado " << i + 1 << endl;
+        // cout << "Digite o nome: ";
+        // cin >> pessoa[quantidade].nome;
+        cout << "Digite o genero: ";
+        cin >> pessoa[i].genero;
+        cout << "Digite a idade: ";
+        cin >> pessoa[i].idade;
+        cout << "Digite o salario: ";
+        cin >> pessoa[i].salario;
+
+        if (pessoa[i].salario < menorSalario)
+        {
+            menorSalario = pessoa[i].salario;
+            idadeMenorSalario = pessoa[i].idade;
+            generoMenorSal = pessoa[i].genero;
+        }
+
+        if (pessoa[i].genero == 'F' || pessoa[i].genero == 'f')
+
+        {
+            qtd_mulheres++;
+        }
+
+        if (pessoa[i].idade > maiorIdade)
+        {
+            maiorIdade = pessoa[i].idade;
+        }
+        if (pessoa[i].idade < menorIdade)
+        {
+            menorIdade = pessoa[i].idade;
+        }
+
+        if (pessoa[i].salario < menorSalario)
+        {
+            menorSalario = pessoa[i].salario;
+            idadeMenorSalario = pessoa[i].idade;
+            generoMenorSal = pessoa[i].genero;
+        }
+    }
+
+    cout << "\n\n\n";
+    cout << "Quantidade de mulheres: " << qtd_mulheres << endl;
+    cout << "Menor idade: " << menorIdade << endl;
+    cout << "Maior idade: " << maiorIdade << endl;
+    cout << "Genero e idade da pessoa com nenor salario " << endl;
+    cout << "GENERO\tIDADE\tSALARIO\n";
+    cout << generoMenorSal << "\t" << idadeMenorSalario << "\t" << menorSalario << "\n";
+
+    // cadastro(quantidade, pessoa);
+
+    cout << "\nDigite o genero para consulta:(M/F) ";
+    cin >> genero;
+
+    float media = calculo(genero, quantidade, pessoa);
+    cout << "A media salarial eh: " << media << endl;
 
     return 0;
-}
-
-void cadastro(int quantidade, Entrevistado pessoa[])
-{
-    
-
-    bool repetir = 1;
-    char continuar;
-
-    do
-    {
-        cout << "Entrevistado " << quantidade + 1 << endl;
-        cout << "Digite o nome: ";
-        cin >> pessoa[quantidade].nome;
-        cout << "Digite o genero: ";
-        cin >> pessoa[quantidade].genero;
-        cout << "Digite a idade: ";
-        cin >> pessoa[quantidade].idade;
-        cout << "Digite o salario: ";
-        cin >> pessoa[quantidade].salario;
-
-        cout << "Deseja continuar cadastro? (S/N) ";
-        cin >> continuar;
-
-        if (continuar == 's' || continuar == 'S')
-        {
-            repetir = 1;
-
-            quantidade++;
-        }
-        else
-        {
-            repetir = 0;
-        }
-
-    } while (repetir == 1);
 }
