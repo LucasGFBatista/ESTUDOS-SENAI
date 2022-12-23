@@ -1,0 +1,113 @@
+* {
+	margin: 0;
+	padding: 0; 
+}
+body{
+    position: relative;
+    width: 1280px;
+    height: 720px;
+}
+
+/*cabeçalho*/
+
+header{
+    position: absolute;
+    width: 1064px;
+    height: 30px;
+    left: 108px;
+    top: 25px;
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+  header ul {
+    margin: 0.3rem 0rem 0.2rem 0rem;
+    height: calc(100% - 0.5rem);
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    list-style: none;
+  }
+
+
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between ;
+
+
+  }.sideinfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    position: absolute;
+    width: 366px;
+    height: 363px;
+    left: 108px;
+    top: 215px;
+
+  }.sideinfo .info{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  } 
+  .sideinfo .info .mobile {
+    width: 40px;
+    height: 60px;
+  }
+.sideinfo .info .local{
+    width: 40px;
+    height: 45px;
+}
+.sideinfo .info .mail{
+    width: 40px;
+    height: 30px;
+}
+.sideinfo .info .titulo{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000
+}
+
+.sideinfo .info .texto{
+    width: 250px;
+    text-align: justify;
+
+}
+.form{
+    position: absolute;
+    width: 632px;
+    height: 200px;
+    left: 540px;
+    top: 275px;
+}
+
+
+.form form{
+    display: flex;
+    flex-direction: row;
+}
+
+.form .tabs {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+
+footer{
+    position: absolute;
+    width: 1280px;
+    height: 20px;
+    left: 0px;
+    top: 700px;
+
+}
