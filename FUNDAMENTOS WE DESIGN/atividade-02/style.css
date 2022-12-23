@@ -2,6 +2,9 @@
 	margin: 0;
 	padding: 0; 
 }
+
+a:link{text-decoration: none;}
+
 body{
     position: relative;
     width: 1280px;
@@ -21,13 +24,22 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    
+}.menu{
+position: absolute;
+width: 416px;
+height: 24px;
+left: 756px;
+top: 28px;
+
 }
 
   header ul {
     margin: 0.3rem 0rem 0.2rem 0rem;
     height: calc(100% - 0.5rem);
     display: flex;
-    align-items: center;
+    justify-content: space-between;
     flex-shrink: 0;
     list-style: none;
   }
