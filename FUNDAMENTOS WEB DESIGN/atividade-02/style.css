@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(240, 255, 255, 0.644);
+}
+
+/*cabeçalho*/
+
+header {
+  position: absolute;
+  width: 90vw;
+  height: 80px;
+  top: 0px;
+  margin-left: 50px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  width: 300px;
+}
+
+header p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 24px;
+  color: #000000;
+}
+
+header .menu {
+  position: relative;
+  width: 70%;
+  height: 24px;
+  
+}
+
+
+
+header a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.6;
+  padding: 20px;
+}
+
+header a:hover {
+  color: rgb(24, 139, 233);
+}
+
+header ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-shrink: 0;
+  list-style: none;
+}
+
+/*principal*/
+section {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+
+  margin-left: 50px;
+}
+
+/*lado esquerdo*/
+.sideinfo {
+  width: 25vw;
+  height: 25vw;
+
+  position: relative;
+  margin-top: 215px;
+  margin-left: 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  align-items: center;
+}
+.sideinfo .info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+.sideinfo .info img {
+  margin-right: 10px;
+}
+.sideinfo .info #phone,
+#local,
+#email {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.sideinfo .info .mobile {
+  width: 40px;
+  height: 60px;
+}
+.sideinfo .info .local {
+  width: 40px;
+  height: 45px;
+}
+.sideinfo .info .mail {
+  width: 40px;
+  height: 30px;
+}
+
+.sideinfo .info .texto {
+  width: 250px;
+  text-align: justify;
+}
+/*lado direito*/
+.form {
+  width: 50vw;
+  height: 50vh;
+
+  position: relative;
+  margin-top: 200px;
+  margin-left: 50px;
+}
+
+.form .boxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form .boxes .tabs {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  margin-right: 20px;
+
+  width: 50%;
+}
+.form .boxes .tabs input {
+  outline: unset;
+
+  padding: 20px;
+  width: 300px;
+  height: 10px;
+
+  border: none;
+  border-radius: 20px;
+
+  background-color: #029cbe;
+  opacity: 0.8;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  margin-top: 0px;
+  margin-bottom: 20px;
+
+  color: whitesmoke;
+
+}
+
+.form .boxes .tabs input::placeholder{
+  color: whitesmoke;
+  font-size:larger;
+}
+
+
+.form textarea {
+  outline: unset;
+  padding: 20px;
+  width: 50%;
+  height: 200px;
+  border: none;
+  border-radius: 20px;
+  background-color: #029cbe;
+  opacity: 0.8;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  color: whitesmoke;
+}
+
+.form textarea::placeholder { 
+  color: whitesmoke;
+  font-size:larger;
+}
+
+.form .send input {
+  outline: unset;
+  padding: 20px;
+  height: 10px;
+  width: 100%;
+
+  border: none;
+  border-radius: 20px;
+  background-color: #029cbe;
+  opacity: 0.8;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  color: whitesmoke;
+  font-size: large;
+ text-align: center ;
+  
+}
+
+/*rodapé*/
+footer {
+  width: 100vw;
+  height: 30px;
+
+  position: absolute;
+  bottom: 0px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer .footerlinks {
+  width: 20%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.6;
+}
+
+footer a:hover {
+  color: rgb(24, 139, 233);
+}
