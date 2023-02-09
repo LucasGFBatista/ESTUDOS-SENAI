@@ -1,0 +1,38 @@
+
+		/*
+		Author: Lucas Gonçalves
+		Email: lucas.gf.batista@gmail.com
+		Theme: Aula 01
+		Version: 1.0
+
+			style.css
+		*/
+
+		body {
+			background-color: #363636;
+			color: #dcdcdc;
+			}
+
+		/*
+			Calculo do tamanho da fonte é a cada 8px. A partir da tag p.
+		*/
+		
+		h1 {
+			font-size: 72px;	
+		}
+		h2 {
+			font-size: 64px;	
+		}
+		h3 {
+			font-size: 56px;	
+		}
+		h4 {
+			font-size: 48px;	
+		}
+		h5 {
+			font-size: 40px;	
+		}
+		h6 {
+			font-size: 32px;	
+		}
+	
