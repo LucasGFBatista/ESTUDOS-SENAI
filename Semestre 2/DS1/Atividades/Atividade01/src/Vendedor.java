@@ -1,10 +1,8 @@
-
 public class Vendedor {
 	
 	private String nome;
 	private double salario;
 	private double TotalVendaMes;
-	
 	
 	/*CONSTRUTOR*/
 	
@@ -19,7 +17,6 @@ public class Vendedor {
 	public double salarioComissionado(double salario, double TotalVendaMes) {
 		return (TotalVendaMes * 0.15) + salario;
 	}
-
 
 	/*GETS AND SETS*/
 	public String getNome() {
