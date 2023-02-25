@@ -10,25 +10,26 @@ Obs.: Implemente utilizando os conceitos de orientação a objetos abordados at�
 - Visibilidade
 - Construtores
 - Métodos assessores
-
+	
 */
 
 
 public class Main{
 	public static void main(String[] args) {
 		
-		Scanner leitor = new Scanner(System.in);
+		//Scanner leitor = new Scanner(System.in);
 		
-		Vendedor vendedor = new Vendedor("Lucas",);
+		Vendedor Lucas = new Vendedor("Lucas Gonçalves", 1200.00, 4900);
 		
-		System.out.println("Digite o nome do funcionario: " + );
+		System.out.println("Digite o nome do funcionario: " + Lucas.getNome());
 		//vendedor.setNome(leitor.nextLine());
 		
-		System.out.println("Digite o sálario fixo: R$");
+		System.out.println("Digite o sálario fixo: R$" + Lucas.getSalario() );
 		//vendedor.setSalario(leitor.nextDouble());
 		
-		System.out.println("Digite o total de vendas no mês : R$");
+		System.out.println("Digite o total de vendas no mês : R$" + Lucas.getTotalVendaMes());
 		//vendedor.setTotalVendaMes(leitor.nextDouble());
 		
+		System.out.println("Salario com comissão: R$" + Lucas.salarioComissionado(Lucas.getSalario(), Lucas.getTotalVendaMes()));
 	}
 }
