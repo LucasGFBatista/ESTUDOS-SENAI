@@ -1,24 +1,24 @@
 public class Vendedor {
-	
+
 	private String nome;
 	private double salario;
 	private double TotalVendaMes;
-	
-	/*CONSTRUTOR*/
-	
+
+	/* CONSTRUTOR */
+
 	public Vendedor(String nome, double salario, double TotalVendaMes) {
 		super();
 		this.nome = nome;
 		this.salario = salario;
 		this.TotalVendaMes = TotalVendaMes;
 	}
-	
-	/*METODO COMISSÃO*/
+
+	/* METODO COMISSÃO */
 	public double salarioComissionado(double salario, double TotalVendaMes) {
 		return (TotalVendaMes * 0.15) + salario;
 	}
 
-	/*GETS AND SETS*/
+	/* GETS AND SETS */
 	public String getNome() {
 		return nome;
 	}
@@ -42,5 +42,5 @@ public class Vendedor {
 	public void setTotalVendaMes(double totalVendaMes) {
 		TotalVendaMes = totalVendaMes;
 	}
-	
+
 }
