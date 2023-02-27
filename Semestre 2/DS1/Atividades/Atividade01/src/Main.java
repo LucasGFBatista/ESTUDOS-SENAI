@@ -47,8 +47,7 @@ public class Main {
 			System.out.println("\nVendedor: " + v.getNome());
 			System.out.println("Salário fixo: R$" + v.getSalario());
 			System.out.println("Total de vendas do mês: R$" + v.getTotalVendaMes());
-			System.out
-					.println("Salário com comissão: R$" + v.salarioComissionado(v.getSalario(), v.getTotalVendaMes()));
+			System.out.println("Salário com comissão: R$" + v.salarioComissionado(v.getSalario(), v.getTotalVendaMes()));
 		}
 
 		leitor.close();
