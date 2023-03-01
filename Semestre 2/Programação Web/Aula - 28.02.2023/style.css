@@ -1,0 +1,74 @@
+/*
+		Author: Lucas Gonçalves
+		Email: lucas.gf.batista@gmail.com
+		Theme: Portifolio
+		Version: 1.0
+*/
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    background-color: brown;
+    color: aliceblue;
+}
+ul{
+    list-style-type: none;
+  
+}
+a:link{
+    color: aquamarine;
+    text-decoration: none;
+    
+}
+
+a:hover{
+    color: cornflowerblue;
+}
+
+a:visited{
+    color: aquamarine;
+
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/*IDS AND CLASSSES*/
+
+#brand{
+    width: 80px;
+    height: 80px;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.navbar > li {
+    margin-left: 10px;
+}
+.navbar > li > a{
+    padding: 10px;
+}
+
+#about-img{
+    width: 450px;
+    height: auto;
+    padding: 20px;
+}
+#about {
+    display: flex;
+    flex-direction: row;
+}
+
+#about> div > p {
+    text-align: justify;
+    margin-right: 200px;
+}
