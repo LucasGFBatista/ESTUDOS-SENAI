@@ -1,4 +1,4 @@
-
+package Teste;
 public class Funcionario {
 
 	private String nome;
@@ -8,9 +8,9 @@ public class Funcionario {
 
 	@Override
 	public String toString() {
-		return "Nome: " + this.nome + 
-				"\nIdade: " + this.idade + 
-				"\nGenero: " + this.genero;
+		return "Nome: " + nome + 
+				"\nIdade: " + idade + 
+				"\nGenero: " + genero;
 				//"\nDepartamento: " + this.departamento;
 	}
 

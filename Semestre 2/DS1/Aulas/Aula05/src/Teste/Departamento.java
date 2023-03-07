@@ -1,3 +1,4 @@
+package Teste;
 
 public enum Departamento {
 	FINANCEIRO,
