@@ -1,0 +1,61 @@
+/*
+		Author: Lucas Gonçalves
+		Email: lucas.gf.batista@gmail.com
+		Theme: Atividade - 14/03/2023
+		Version: 1.0
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'League Spartan', sans-serif;
+}
+
+body{
+    background-color: aliceblue;
+}
+
+a:link{
+    color: aliceblue;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+}
+
+a:hover{
+    color: gold;
+}
+
+header{
+    background-color: tomato;
+    padding: 20px 0;
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+}
+
+/*      IDS AND CLASSES     */
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brands img {
+    width: 50px;
+    height: auto;
+}
+
+.navbar{
+    display: flex;
+    gap: 30px;
+}
+
+.navbar > li {
+
+    list-style: none;
+}
+
+
