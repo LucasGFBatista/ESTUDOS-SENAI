@@ -1,70 +1,73 @@
 public class Funcionario extends Pessoa {
-    private String cpf;
-    private String rg;
-    private String matricula;
-    private double salario;
+	private String cpf;
+	private String rg;
+	private String matricula;
+	private Setor setor;
+	private double salario;
 
-    /*      Constructor     */
+	/* Constructor */
 
-    public Funcionario() {
+	public Funcionario() {
 
-    }
+	}
 
-    public Funcionario(int id, String nome, int idade, Genero genero, String cpf, String rg, String matricula, double salario, Endereco endereco) {
-        super(id, nome, idade, genero, endereco);
-        this.cpf = cpf;
-        this.rg = rg;
-        this.matricula = matricula;
-        this.salario = salario;
-    }
+	public Funcionario(int id, String nome, int idade, Genero genero, String cpf, String rg, String matricula,
+			double salario, Setor setor, Endereco endereco) {
+		super(id, nome, idade, genero, endereco);
+		this.cpf = cpf;
+		this.rg = rg;
+		this.matricula = matricula;
+		this.setor = setor;
+		this.salario = salario;
+	}
 
-    /*      Getter and Setter       */
+	/* Getter and Setter */
 
-    public String getCpf() {
-        return cpf;
-    }
+	public String getCpf() {
+		return cpf;
+	}
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
 
-    public String getRg() {
-        return rg;
-    }
+	public String getRg() {
+		return rg;
+	}
 
-    public void setRg(String rg) {
-        this.rg = rg;
-    }
+	public void setRg(String rg) {
+		this.rg = rg;
+	}
 
-    public String getMatricula() {
-        return matricula;
-    }
+	public String getMatricula() {
+		return matricula;
+	}
 
-    public void setMatricula(String matricula) {
-        this.matricula = matricula;
-    }
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
+	}
 
-    public double getSalario() {
-        return salario;
-    }
+	public Setor getSetor() {
+		return setor;
+	}
 
-    public void setSalario(double salario) {
-        this.salario = salario;
-    }
+	public void setSetor(Setor setor) {
+		this.setor = setor;
+	}
 
-    @Override
-    public String toString() {
-        return "Funcionario\n" +
-                "\nNome: " + nome +
-                "\nID: " + id +
-                "\nMatricula: " + matricula +
-                "\nCPF" + cpf +
-                "\nRG: " + rg +
-                "\nIdade: " + idade +
-                "\nGenero: " + genero.valor +
-                "\nSalario: R$" + salario  +
-                "\n\nENDEREÇO\n" + endereco.toString();
+	public double getSalario() {
+		return salario;
+	}
 
+	public void setSalario(double salario) {
+		this.salario = salario;
+	}
 
-    }
+	@Override
+	public String toString() {
+		return "Funcionario\n" + "\nNome: " + nome + "\nID: " + id + "\nMatricula: " + matricula + "\nCPF" + cpf
+				+ "\nRG: " + rg + "\nIdade: " + idade + "\nGenero: " + genero.valor + "\nSetor: " + setor.nomeSetor
+				+ "\nSalario: R$" + salario + "\n\nENDEREÇO\n" + endereco.toString();
+
+	}
 }
