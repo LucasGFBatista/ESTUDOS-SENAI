@@ -1,9 +1,9 @@
-public class Funcionario extends Pessoa {
-	private String cpf;
-	private String rg;
-	private String matricula;
-	private Setor setor;
-	private double salario;
+public abstract class Funcionario extends Pessoa {
+	protected String cpf;
+	protected String rg;
+	protected String matricula;
+	protected Setor setor;
+	protected double salario;
 
 	/* Constructor */
 
