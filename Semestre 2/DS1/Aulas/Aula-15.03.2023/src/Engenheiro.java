@@ -3,7 +3,7 @@ public class Engenheiro extends Funcionario {
 		private String crea;
 
 		public Engenheiro() {
-			super();
+			
 		}
 
 		public Engenheiro(int id, String nome, int idade, Genero genero, String cpf, String rg, String crea , String matricula,
@@ -23,12 +23,18 @@ public class Engenheiro extends Funcionario {
 					"\nCrea: " + crea +
 					"\nIdade: " + idade + 
 					"\nGenero: " + genero.valor + 
-					"\nSetor: " + Setor.ENGENHARIA.nomeSetor + 
+					"\nSetor: " + setor.ENGENHARIA + 
 					"\nSalario: R$" + salario + 
-					"\n\nENDEREÇO\n" + endereco.toString();
-	
-	
-		
+					"\n\nENDEREÃ‡O\n" + endereco.toString();
+			}
+
+		public String getCrea() {
+			return crea;
+		}
+
+		public void setCrea(String crea) {
+			this.crea = crea;
+		}
 		
 		
 }
