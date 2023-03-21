@@ -1,14 +1,20 @@
 public enum Genero {
-    MASCULINO('M'),
-    FEMININO('F');
+	MASCULINO('M', "Masculino"), FEMININO('F', "Feminino");
 
-    protected char valor;
+	protected char valor;
+	protected String texto;
 
-    Genero(char valor) {
-        this.valor = valor;
-    }
+	Genero(char valor, String texto) {
+		this.valor = valor;
+		this.texto = texto;
+	}
 
-    public char getValor() {
-        return valor;
-    }
+	public char getValor() {
+		return valor;
+	}
+
+	public String getTexto() {
+		return texto;
+	}
+
 }
