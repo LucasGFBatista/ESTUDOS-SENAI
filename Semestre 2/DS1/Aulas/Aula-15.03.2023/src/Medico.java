@@ -3,7 +3,7 @@ public class Medico extends Funcionario {
 		private String crm;
 
 		public Medico() {
-			super();
+			
 		}
 
 		public Medico(int id, String nome, int idade, Genero genero, String cpf, String rg, String crm , String matricula,
@@ -23,12 +23,17 @@ public class Medico extends Funcionario {
 					"\ncrm: " + crm +
 					"\nIdade: " + idade + 
 					"\nGenero: " + genero.valor + 
-					"\nSetor: " + Setor.ENGENHARIA.nomeSetor + 
+					"\nSetor: " + setor.SAUDE + 
 					"\nSalario: R$" + salario + 
-					"\n\nENDEREÇO\n" + endereco.toString();
+					"\n\nENDEREÃ‡O\n" + endereco.toString();
+			}
+
+		public String getCrm() {
+			return crm;
+		}
+
+		public void setCrm(String crm) {
+			this.crm = crm;
+		}	
 	
-	
-		
-		
-		
 }
