@@ -25,15 +25,8 @@ public class Fornecedor extends PessoaJuridica {
 
 	@Override
 	public String toString() {
-		return "Fornecedor"  
-				+ "\nNome=" + super.nome 
-				+ "\nID" + super.id 
-				+"\nProduto: " + this.produto 
-				+ "\nTelefone=" + super.telefone
-				+ "\nE-mail=" + super.email 
-				+ "\n\nENDERECO\n" + endereco.toString();
+		return "Fornecedor" + "\nNome=" + super.nome + "\nID" + super.id + "\nProduto: " + this.produto + "\nTelefone="
+				+ super.telefone + "\nE-mail=" + super.email + "\n\nENDERECO\n" + endereco.toString();
 	}
 
-	
-	
 }

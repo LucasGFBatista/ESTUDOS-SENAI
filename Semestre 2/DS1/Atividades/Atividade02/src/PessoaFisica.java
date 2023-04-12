@@ -25,7 +25,7 @@ public abstract class PessoaFisica extends Pessoa {
 	public int getIdade() {
 		return Period.between(this.dataNascimento, LocalDate.now()).getYears();
 	}
-	
+
 	public Genero getGenero() {
 		return genero;
 	}

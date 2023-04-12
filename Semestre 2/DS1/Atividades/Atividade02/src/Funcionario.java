@@ -70,17 +70,10 @@ public abstract class Funcionario extends PessoaFisica {
 
 	@Override
 	public String toString() {
-		return "Funcionario\n" 
-				+ "\nNome: " + super.nome 
-				+ "\nData nascimento: " + super.dataNascimento 
-				+ "\nIdade: " + super.getIdade()
-				+ "\nID: " + super.id 
-				+ "\nMatricula: " + this.matricula 
-				+ "\nCPF" + this.cpf + "\nRG: " + this.rg 
-				+ "\nGenero: "+ super.genero.texto 
-				+ "\nSetor: " + this.setor.nomeSetor 
-				+ "\nSalario: R$" + this.salario
-				+ "\n\nENDERE�O\n" + endereco.toString();
+		return "Funcionario\n" + "\nNome: " + super.nome + "\nData nascimento: " + super.dataNascimento + "\nIdade: "
+				+ super.getIdade() + "\nID: " + super.id + "\nMatricula: " + this.matricula + "\nCPF" + this.cpf
+				+ "\nRG: " + this.rg + "\nGenero: " + super.genero.texto + "\nSetor: " + this.setor.nomeSetor
+				+ "\nSalario: R$" + this.salario + "\n\nENDERE�O\n" + endereco.toString();
 
 	}
 }

@@ -30,7 +30,7 @@ public class Medico extends Funcionario {
 	public String toString() {
 		return "Medico\n" + "\nNome: " + super.nome + "\nData nascimento: " + super.dataNascimento + "\nIdade: " + super.getIdade() +
 				"\nID: "
-				+ super.id + "\nMatricula: " + super.matricula + "\nCPF" + super.cpf + "\nRG: " + super.rg + "\nCRM: "
+				+ super.id + "\nMatricula: " + super.matricula + "\nCPF: " + super.cpf + "\nRG: " + super.rg + "\nCRM: "
 				+ this.crm + "\nGenero: " + super.genero.texto + "\nSetor: " + super.setor.nomeSetor + "\nSalario: "
 				+ super.getSalario() + "\n\nENDERECO\n" + endereco.toString();
 

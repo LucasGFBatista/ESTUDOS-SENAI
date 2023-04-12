@@ -10,8 +10,8 @@ public abstract class PessoaJuridica extends Pessoa {
 		super();
 	}
 
-	public PessoaJuridica(int id, String nome, String telefone, String email, String cnpj,
-			String inscricaoEstadual, Endereco endereco) {
+	public PessoaJuridica(int id, String nome, String telefone, String email, String cnpj, String inscricaoEstadual,
+			Endereco endereco) {
 		super(id, nome, telefone, email, endereco);
 		this.cnpj = cnpj;
 		this.inscricaoEstadual = inscricaoEstadual;
@@ -46,7 +46,5 @@ public abstract class PessoaJuridica extends Pessoa {
 				"\nE-mail: " +  email +
 				"\n\nENDERECO\n" + endereco.toString();
 	}
-
-
 
 }
