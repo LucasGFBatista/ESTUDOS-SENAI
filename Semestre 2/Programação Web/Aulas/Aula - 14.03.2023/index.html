@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--        CSS     -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="css/slide.css" />
+
+    <!--        ICONS        -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--        FONTS GOOGLE        -->
+
+    <!--        IMAGE TAB       -->
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+    <title>Aula 05</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="container" id="header">
+        <div id="header-brand">
+          <a href="#"><img src="images/logo.png" alt="logo" /></a>
+        </div>
+
+        <nav>
+          <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#company">Empresa</a></li>
+            <li><a href="#services">Servicos</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+        </nav>
+
+        <nav>
+          <ul class="navbar">
+            <li>
+              <a href="instagram.com/lucas_gfbatista/" target="_blank"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="github.com/lucasgfbatista/" target="_blank"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section>
+      <!--      Start slide      -->
+
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="images/img01.jpg" style="width: 100%" />
+          <div class="text">Caption Text</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="images/img02.jpg" style="width: 100%" />
+          <div class="text">Caption Two</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="images/img03.jpg" style="width: 100%" />
+          <div class="text">Caption Three</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      </div>
+      <br />
+
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+
+      <!--      End slide     -->
+    </section>
+    <section>
+      <!--      Start about       -->
+      <div class="container" id="about">
+        <img src="./images/img04.jpg" alt="" id="about-image" />
+        <div id="about-discription">
+          <h1>A empresa</h1>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+            officiis harum suscipit dolorem, a, accusamus repellat, perferendis
+            quos eligendi temporibus ipsum. Iure sunt quaerat vel quas quibusdam
+            fugit dicta eum. Lorem, ipsum dolor sit amet consectetur adipisicing
+            elit. Aperiam officiis harum suscipit dolorem, a, accusamus
+            repellat, perferendis quos eligendi temporibus ipsum. Iure sunt
+            quaerat vel quas quibusdam fugit dicta eum. Lorem, ipsum dolor sit
+            amet consectetur adipisicing elit. Aperiam officiis harum suscipit
+            dolorem, a, accusamus repellat, perferendis quos eligendi temporibus
+            ipsum. Iure sunt quaerat vel quas quibusdam fugit dicta eum.
+          </p>
+        </div>
+      </div>
+      <!--      End about     -->
+    </section>
+    <section>
+      <!--      Start contact       -->
+      <div class="container" id="contact">
+        <div id="contact-youtube">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/_nOeh677C8U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div id="contact-form">
+          <h1>Contato</h1>
+          <p>Preencha o formulario abaixo</p>
+
+          <form action="">
+            <label for="">Digite seu nome: </label>
+            <input type="text" name="nome" id="nome">
+
+            <label for="">Digite seu e-mail:</label>
+            <input type="email" name="email" id="email">
+            <div>
+                <input type="submit" value="Enviar mensagem">
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!--      End contact     -->
+    </section>
+    <section>
+        <!--        Start Map       -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7777.5358876964765!2d-38.38713982009888!3d-12.922630932660006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71617398522b159%3A0x721c372aad87fe05!2sParque%20Tecnol%C3%B3gico%20da%20Bahia%20-%20R.%20Mundo%2C%20121%20-%20Trobogy%2C%20Salvador%20-%20BA%2C%2041301-110!5e0!3m2!1spt-BR!2sbr!4v1678836484501!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!--        End Map     -->
+    </section>
+
+    <footer>
+      <div class="container" id="footer">
+        <p>Todos os direitos reservados. &copy;</p>
+      </div>
+    </footer>
+
+    <!--        JAVASCRIPT      -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
