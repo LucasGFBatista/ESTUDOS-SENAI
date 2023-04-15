@@ -58,24 +58,24 @@ public abstract class Funcionario extends Pessoa {
 	public void setDataNascimento(LocalDate dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
-	
+
 	public int getIdade(LocalDate dataNascimento) {
-		Period idade = Period.between(dataNascimento, LocalDate.now());
-	
-		return idade;
+
+		return Util.timeBetween(dataNascimento);
 	}
 
 	@Override
 	public String toString() {
 		return "Funcionario\n" 
-				+ "\nNome: " + nome 
-				+ "\nID: " + id 
-				+ "\nCPF" + cpf 
-				+ "\nRG: " + rg
-				+ "\nData de Nascimento: " + dataNascimento
-				+ "\nGenero: " + genero.valor 
-				+ "\nSalario: R$" + salario 
-				+ "\n\nENDEREÇO\n" + endereco.toString();
+				+ "\nNome: " + super.nome
+				+ "\nIdade" + this.getIdade(dataNascimento)
+				+ "\nID: " + super.id 
+				+ "\nCPF" + this.cpf 
+				+ "\nRG: " + this.rg
+				+ "\nData de Nascimento: " + this.dataNascimento
+				+ "\nGenero: " + super.genero.valor 
+				+ "\nSalario: R$" + this.salario 
+				+ "\n\nENDEREï¿½O\n" + super.endereco.toString();
 
 	}
 }
