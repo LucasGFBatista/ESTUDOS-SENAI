@@ -43,6 +43,7 @@ public class PessoaJuridica extends Pessoa {
 	}
 
 	public String getDataFim() {
+		
 		return Util.formatDate(dataFim);
 	}
 
@@ -54,6 +55,12 @@ public class PessoaJuridica extends Pessoa {
 		this.cnpj = cnpj;
 	}
 
+	
+	public String getTempoContrato() {
+		
+		return Util.timeBetween(dataInicio, dataFim);
+	}
+	
 	public String getInscricaoEstadual() {
 		return inscricaoEstadual;
 	}
@@ -65,11 +72,14 @@ public class PessoaJuridica extends Pessoa {
 	@Override
 	public String toString() {
 		return "CLIENTE\n" + 
-				"\nNome: " + nome +
-				"\nID: " + id +
-				"\nInscri�ao Estadual: " + inscricaoEstadual +
-				"\nCNPJ: " + cnpj +
-				"\n\nENDERECO\n" + endereco.toString();
+				"\nNome: " + super.nome +
+				"\nID: " + super.id +
+				"\nInicio contrato: " + this.getDataInicio() +
+				"\nFim do contrato: " + this.getDataFim() +
+				"\nTempo de contrato: " + this.getTempoContrato() +				
+				"\nInscri�ao Estadual: " + this.inscricaoEstadual +
+				"\nCNPJ: " + this.cnpj +
+				"\n\nENDERECO\n" + super.endereco.toString();
 	}
 
 

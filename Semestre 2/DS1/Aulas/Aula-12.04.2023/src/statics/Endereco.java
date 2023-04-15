@@ -1,88 +1,86 @@
 package statics;
 
 public class Endereco {
-    private String cep;
-    private String logradouro;
-    private String numero;
-    private String complemento;
-    private String cidade;
-    private UnidadeFederativa uf;
+	private String cep;
+	private String logradouro;
+	private String numero;
+	private String complemento;
+	private String cidade;
+	private UnidadeFederativa uf;
 
-    /*          Constructors        */
+	/* Constructors */
 
-    public Endereco() {
-    }
+	public Endereco() {
+	}
 
-    public Endereco(String cep, String logradouro, String numero, String complemento, String cidade, UnidadeFederativa uf) {
-        this.cep = cep;
-        this.logradouro = logradouro;
-        this.numero = numero;
-        this.complemento = complemento;
-        this.cidade = cidade;
-        this.uf = uf;
-    }
+	public Endereco(String cep, String logradouro, String numero, String complemento, String cidade,
+			UnidadeFederativa uf) {
+		this.cep = cep;
+		this.logradouro = logradouro;
+		this.numero = numero;
+		this.complemento = complemento;
+		this.cidade = cidade;
+		this.uf = uf;
+	}
 
+	/* Getter and Setter */
 
+	public String getCep() {
+		return cep;
+	}
 
-    /*          Getter and Setter       */
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
 
-    public String getCep() {
-        return cep;
-    }
+	public String getLogradouro() {
+		return logradouro;
+	}
 
-    public void setCep(String cep) {
-        this.cep = cep;
-    }
+	public void setLogradouro(String logradouro) {
+		this.logradouro = logradouro;
+	}
 
-    public String getLogradouro() {
-        return logradouro;
-    }
+	public String getNumero() {
+		return numero;
+	}
 
-    public void setLogradouro(String logradouro) {
-        this.logradouro = logradouro;
-    }
+	public void setNumero(String numero) {
+		this.numero = numero;
+	}
 
-    public String getNumero() {
-        return numero;
-    }
+	public String getComplemento() {
+		return complemento;
+	}
 
-    public void setNumero(String numero) {
-        this.numero = numero;
-    }
+	public void setComplemento(String complemento) {
+		this.complemento = complemento;
+	}
 
-    public String getComplemento() {
-        return complemento;
-    }
+	public String getCidade() {
+		return cidade;
+	}
 
-    public void setComplemento(String complemento) {
-        this.complemento = complemento;
-    }
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
 
-    public String getCidade() {
-        return cidade;
-    }
+	public UnidadeFederativa getUf() {
+		return uf;
+	}
 
-    public void setCidade(String cidade) {
-        this.cidade = cidade;
-    }
-
-    public UnidadeFederativa getUf() {
-        return uf;
-    }
-
-    public void setUf(UnidadeFederativa uf) {
-        this.uf = uf;
-    }
-
+	public void setUf(UnidadeFederativa uf) {
+		this.uf = uf;
+	}
 
     @Override
     public String toString() {
         return
-                "\nCEP: " + cep +
-                "\nLogradouro: " + logradouro +
-                "\nNumero: " + numero +
-                "\nComplemento: " + complemento +
-                "\nCidade: " + cidade +
-                "\nUF: " + uf.sigla ;
+                "\nCEP: " + this.cep +
+                "\nLogradouro: " + this.logradouro +
+                "\nNumero: " + this.numero +
+                "\nComplemento: " + this.complemento +
+                "\nCidade: " + this.cidade +
+                "\nUF: " + this.uf.sigla ;
     }
 }

@@ -3,11 +3,11 @@ package statics;
 import java.time.LocalDate;
 import java.time.Period;
 
-public abstract class Funcionario extends Pessoa {
-	protected String cpf;
-	protected String rg;
-	protected LocalDate dataNascimento;
-	protected double salario;
+public  class Funcionario extends Pessoa {
+	private String cpf;
+	private String rg;
+	private LocalDate dataNascimento;
+	private double salario;
 
 	/* Constructor */
 
@@ -15,8 +15,8 @@ public abstract class Funcionario extends Pessoa {
 
 	}
 
-	public Funcionario(int id, String nome, Genero genero, Endereco endereco, String cpf, String rg,
-			LocalDate dataNascimento, double salario) {
+	public Funcionario(int id, String nome, Genero genero, String cpf, String rg,
+			LocalDate dataNascimento, double salario, Endereco endereco) {
 		super(id, nome, genero, endereco);
 		this.cpf = cpf;
 		this.rg = rg;
@@ -68,9 +68,9 @@ public abstract class Funcionario extends Pessoa {
 	public String toString() {
 		return "Funcionario\n" 
 				+ "\nNome: " + super.nome
-				+ "\nIdade" + this.getIdade(dataNascimento)
+				+ "\nIdade: " + this.getIdade(dataNascimento)
 				+ "\nID: " + super.id 
-				+ "\nCPF" + this.cpf 
+				+ "\nCPF: " + this.cpf 
 				+ "\nRG: " + this.rg
 				+ "\nData de Nascimento: " + this.dataNascimento
 				+ "\nGenero: " + super.genero.valor 
