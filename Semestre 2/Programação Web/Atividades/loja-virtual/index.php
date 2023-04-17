@@ -5,12 +5,10 @@ if (isset($_GET['limpar'])) {
     unset($_SESSION['buy']);
 }
 
-
-
 $camisas = array(
-    ['name' => 'camisa 01', 'image' => 'uploads/tb-img-01.jpg', 'price' => '55.9'],
-    ['name' => 'camisa 02', 'image' => 'uploads/tb-img-02.jpg', 'price' => '45.9'],
-    ['name' => 'camisa 03', 'image' => 'uploads/tb-img-03.jpg', 'price' => '65']
+    ['name' => 'camisa 01', 'image' => 'img/tb-img-01.jpg', 'price' => '55.9'],
+    ['name' => 'camisa 02', 'image' => 'img/tb-img-02.jpg', 'price' => '45.9'],
+    ['name' => 'camisa 03', 'image' => 'img/tb-img-03.jpg', 'price' => '65']
 );
 
 ?>
@@ -44,7 +42,7 @@ $camisas = array(
     <nav class="navbar navbar-light bg-danger">
         <div class="container">
             <a href="#" class="navbar-brand">
-                <img src="" alt="" class="d-inline-block align-text-top" width="50" height="50">
+                <img src="img/store-front.png" alt="" class="d-inline-block align-text-top" width="50" height="50">
             </a>
         </div>
     </nav>
@@ -92,8 +90,6 @@ $camisas = array(
             foreach ($_SESSION['buy'] as $key => $value) {
                 echo '<p>Nome:' . $value['name'] . ' | Quant.:' . $value['quant'] . ' | Valor: R$' . $value['price'] * $value['quant'] . ':</p>';
                 echo "<br>";
-
-                
             }
         } else {
             echo "O carrinho está vazio!";
