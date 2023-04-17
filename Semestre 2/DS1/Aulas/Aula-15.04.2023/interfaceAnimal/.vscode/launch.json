@@ -1,0 +1,17 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "interfaceAnimal.Main",
+      "projectName": ""
+    },
+    {
+      "type": "fpDebug",
+      "request": "launch",
+      "name": "",
+      "program": "${workspaceFolder}/executable"
+    }
+  ]
+}

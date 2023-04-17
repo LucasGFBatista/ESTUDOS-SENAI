@@ -1,11 +1,14 @@
 <?php
 
 session_start();
+if (isset($_GET['limpar'])) {
+    unset($_SESSION['buy']);
+}
 
 $camisas = array(
-    ['name' => 'camisa 01', 'image' => 'uploads/tb-img-01.jpg', 'price' => '55.9'],
-    ['name' => 'camisa 02', 'image' => 'uploads/tb-img-02.jpg', 'price' => '45.9'],
-    ['name' => 'camisa 03', 'image' => 'uploads/tb-img-03.jpg', 'price' => '65']
+    ['name' => 'camisa 01', 'image' => 'img/tb-img-01.jpg', 'price' => '55.9'],
+    ['name' => 'camisa 02', 'image' => 'img/tb-img-02.jpg', 'price' => '45.9'],
+    ['name' => 'camisa 03', 'image' => 'img/tb-img-03.jpg', 'price' => '65']
 );
 
 ?>
@@ -39,7 +42,7 @@ $camisas = array(
     <nav class="navbar navbar-light bg-danger">
         <div class="container">
             <a href="#" class="navbar-brand">
-                <img src="" alt="" class="d-inline-block align-text-top" width="50" height="50">
+                <img src="img/store-front.png" alt="" class="d-inline-block align-text-top" width="50" height="50">
             </a>
         </div>
     </nav>
@@ -53,7 +56,7 @@ $camisas = array(
                 <div class="card-body">
                     <h5 class="card-title"><?= $value['name'] ?></h5>
                     <p class="card-text">R$ <?= $value['price'] ?></p>
-                    <a href="?comprar<?php echo $key ?>" class="btn btn-warning">COMPRAR</a>
+                    <a href="?comprar=<?php echo $key ?>" class="btn btn-warning">COMPRAR</a>
                 </div>
             </div>
         <?php endforeach; ?>
@@ -81,11 +84,39 @@ $camisas = array(
         <h2>Carrinho:</h2>
         <?php
 
-            foreach($_SESSION['buy'] as $key => $value){
-                echo '<p>Nome:'.$value['name'].' | Quant.:'.$value['quant'].' | Valor: R$'.$value['price']*$value['quant'].':</p>';
-            }
 
+        if (isset($_SESSION['buy'])) {
+
+            foreach ($_SESSION['buy'] as $key => $value) {
+                echo '<p>Nome:' . $value['name'] . ' | Quant.:' . $value['quant'] . ' | Valor: R$' . $value['price'] * $value['quant'] . ':</p>';
+                echo "<br>";
+            }
+        } else {
+            echo "O carrinho está vazio!";
+        }
         ?>
+
+        <?php
+        $total = [
+            'quants' => 0,
+            'prices' => 0
+
+        ];
+
+        if (isset($_SESSION['buy'])) {
+
+            foreach ($_SESSION['buy'] as $key) {
+                $total['quants'] = $total['quants'] + $key['quant'];
+                $total['prices'] = $total['prices'] + $key['price'] * $key['quant'];
+            }
+        }
+        echo $total['quants'] . ' produtos por R$ ' . $total['prices'];
+        ?>
+
+
+
+        <p><a href="?limpar" class="btn btn-secondary">LIMPAR CARRINHO</a></p>
+
     </div>
 
 </body>
