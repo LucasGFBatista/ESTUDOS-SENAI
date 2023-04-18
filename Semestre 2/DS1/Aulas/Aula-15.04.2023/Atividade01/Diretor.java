@@ -12,7 +12,7 @@ public class Diretor extends CargoDeConfianca {
 	}
 
 	public Diretor(String nome, String cpf, Genero genero, double salarioBase, LocalDate dataAdmissao,
-			Bonificacao bonificacao, double PARTICIPACAO_LUCRO) {
+			Bonificacao bonificacao) {
 		super(nome, cpf, genero, salarioBase, dataAdmissao, bonificacao);
 		this.PARTICIPACAO_LUCRO = PARTICIPACAO_LUCRO;
 	}
