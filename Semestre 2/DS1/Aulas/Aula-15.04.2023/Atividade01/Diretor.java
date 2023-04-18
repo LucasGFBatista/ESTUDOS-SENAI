@@ -3,7 +3,7 @@ package Atividade01;
 import java.time.LocalDate;
 
 public class Diretor extends CargoDeConfianca {
-	private double PARTICIPACAO_LUCRO = 0.1;
+	private final double PARTICIPACAO_LUCRO = 0.1;
 
 	// CONSTRUCTOR
 	public Diretor() {
