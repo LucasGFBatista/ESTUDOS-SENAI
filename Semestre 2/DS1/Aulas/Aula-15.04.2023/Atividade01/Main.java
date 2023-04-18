@@ -12,7 +12,7 @@ public static void main(String[] args) {
 	Gerente gerente = new Gerente("Cecilia Lopes", "85869852045", Genero.FEMININO, 2800, LocalDate.of(2015, 05, 03), Bonificacao.GERENTE);
 	
 	// DIRETOR
-	Diretor diretor = new Diretor("Ana Larissa", "84625536587", Genero.FEMININO, 7000, LocalDate.of(2004, 3, 6), Bonificacao.DIRETOR, 0.1);
+	Diretor diretor = new Diretor("Ana Larissa", "84625536587", Genero.FEMININO, 7000, LocalDate.of(2004, 3, 6), Bonificacao.DIRETOR);
 	
 	
 	
