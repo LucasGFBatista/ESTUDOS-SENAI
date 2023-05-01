@@ -1,0 +1,112 @@
+/*
+		Author: Lucas Gonçalves
+		Email: lucas.gf.batista@gmail.com
+		Theme: Prova
+		Version: 1.0
+*/
+
+* {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg-color: #3c3b3b;
+  --text-color: #fff;
+  --h1-size: 64px;
+}
+
+body {
+  height: 100%;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--text-color);
+  text-transform: uppercase;
+}
+a:hover {
+  color: #fed844;
+}
+
+h1 {
+  color: #fed844;
+  font-size: var(--h1-size);
+}
+
+header {
+  max-width: 100%;
+  height: 100px;
+  margin: 10px 0;
+  color: #045a0e;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  height: 40px;
+  margin: 20px 0;
+}
+
+/*        IDS AND CLASSES     */
+
+.container-lgfb{
+    margin: 60px;
+}
+
+/*        HEADER      */
+.header-lgfb {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header-lgfb ul {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.navbar-lgfb li {
+    list-style: none;
+}
+
+.header-lgfb img {
+  width: 90px;
+  height: 90px;
+}
+
+
+/*      ABOUT          */
+#about-lgfb {
+    display: flex;
+    gap: 20px;
+}
+
+#about-img-lgfb{
+    width: 600px;
+}
+
+.about-text-lgfb h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-text-lgfb p {
+    margin-right: 80px;
+}
+
+
+
+/*        FOOTER      */
+.social-icons-lgfb {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
