@@ -1,9 +1,11 @@
+
+
 <?php
-include "header.php";
-require_once "conn.php";
+include "./inc/header.php";
+require_once "./config/conn.php";
 
 //preparar
-$stmt = $conn->prepare("SELECT * FROM user");
+$stmt = $conn->prepare("SELECT * FROM cliente_salao");
 
 //executar
 $stmt->execute();
@@ -19,22 +21,24 @@ $list = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <th scope="col">ID</th>
         <th scope="col">Nome</th>
         <th scope="col">Email</th>
+        <th scope="col">Data de nascimento</th>
         <th scope="col">Ações</th>
 
       </tr>
     </thead>
     <tbody>
       <?php
-      foreach ($list as $user) :
+      foreach ($list as $customer) :
       ?>
         <tr>
-          <th scope="row"><?= $user['id'] ?></th>
-          <td><?= $user['name'] ?></td>
-          <td><?= $user['email'] ?></td>
+          <th scope="row"><?= $customer['id'] ?></th>
+          <td><?= $customer['name'] ?></td>
+          <td><?= $customer['email'] ?></td>
+          <td><?= $customer['birthday_date'] ?></td>
           <td>
-            <a href="update.php?id=<?= $user['id']; ?>">Editar</a>
+            <a href="update.php?id=<?= $customer['id']; ?>">Editar</a>
             |
-            <a href="delete.php?id=<?= $user['id']; ?>">Deletar</a>
+            <a href="delete.php?id=<?= $customer['id']; ?>">Deletar</a>
           </td>
         </tr>
 
@@ -42,6 +46,8 @@ $list = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </tbody>
   </table>
 </main>
-<?php
 
-include "footer.php"; ?>
+<!-- FOOTER -->
+<?php
+include "./inc/footer.php";
+?>

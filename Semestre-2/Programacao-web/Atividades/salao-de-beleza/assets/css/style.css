@@ -5,3 +5,8 @@ footer{
     width: 100%;
 }
 
+.container .box-basicInfo{
+    display: flex;
+    flex-direction: row;
+
+}

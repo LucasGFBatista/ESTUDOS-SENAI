@@ -1,5 +1,5 @@
 <?php
-include "header.php";
+include "./inc/header.php";
 require_once "conn.php";
 
 $id = filter_input(INPUT_GET, 'id');
@@ -48,4 +48,7 @@ $list = $stmt->fetch(PDO::FETCH_ASSOC);
 
 </div>
 
-<?php include "footer.php"; ?>
+<!-- FOOTER -->
+<?php
+include "./inc/footer.php";
+?>
