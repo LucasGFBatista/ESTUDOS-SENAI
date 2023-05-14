@@ -13,7 +13,7 @@ $cep = filter_input(INPUT_POST, 'cep');
 
 
 //preparar
-$stmt = $conn->prepare("INSERT INTO cliente_salao (name,email,birthday_date,endereco,bairro,cidade,estado,cep) VALUES (:name,:email,:birthday_date, :endereco, :bairro, :cidade, :estado, :cep)");
+$stmt = $conn->prepare("INSERT INTO cliente (name,email,birthday_date,endereco,bairro,cidade,estado,cep) VALUES (:name,:email,:birthday_date, :endereco, :bairro, :cidade, :estado, :cep)");
 
 //trocar
 $stmt->bindValue(':name', $name);
@@ -29,13 +29,15 @@ $stmt->bindValue(':cep', $cep);
 //executar
 $stmt->execute();
 
-echo "$name - $email - $birthday_date";
-echo "<br>";
-echo "$endereco - $bairro - $cidade - $estado - $cep";
+
+// Teste de conexão com o banco de dados
+//echo "$name - $email - $birthday_date";
+//echo "<br>";
+//echo "$endereco - $bairro - $cidade - $estado - $cep";
 
 
 
-//header('Location: ../index.php');
+header('Location: ../index.php');
 ?>
 
 <!--        -->

@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "root";
 $password = "";
-$db = "crud_pdo";
+$db = "salao_beleza";
 
 
 try {

@@ -5,7 +5,7 @@ include "./inc/header.php";
 require_once "./config/conn.php";
 
 //preparar
-$stmt = $conn->prepare("SELECT * FROM cliente_salao");
+$stmt = $conn->prepare("SELECT * FROM cliente");
 
 //executar
 $stmt->execute();

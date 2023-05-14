@@ -26,9 +26,9 @@ $stmt->bindValue(':cep', $cep);
 
 $stmt->execute();
 
-echo "$id - $name - $email - $birthday_date";
-echo "<br>";
-echo "$endereco - $bairro - $cidade - $estado - $cep";
+    echo "$id - $name - $email - $birthday_date";
+    echo "<br>";
+    echo "$endereco - $bairro - $cidade - $estado - $cep";
 
 
 
