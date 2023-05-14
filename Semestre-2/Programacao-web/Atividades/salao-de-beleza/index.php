@@ -3,82 +3,37 @@ include "./inc/header.php";
 
 
 ?>
-
-<div class="container py-2 insertTitle">
-    <h2>Cadastro de cliente</h2>
-</div>
-<form action="./config/insert.php" method="post">
-
-
-    <div class="container py-2">
-
-
-        <div class="box-basicInfo">
-
-            <div class="basicInfoTitle">
-                <h3>Informações básicas</h3>
-            </div>
-
-            <div class="basicInfoForm">
-                <div class="mb-3">
-                    <label for="name">Nome de cliente</label>
-                    <input type="text" name="name" id="name" value="">
-                </div>
-
-                <div class="mb-3">
-                    <label for="email">E-mail de cliente</label>
-                    <input type="email" name="email" id="email" value="">
-                </div>
-
-                <div class="mb-3">
-                    <label for="birthday_date">Data de nascimento</label>
-                    <input type="date" id="birthday_date" name="birthday_date" value="Today" min="1940-01-01" max="2023-12-01">
-                </div>
-
-            </div>
-
+<main class="container py-5">
+    <!--    START MAIN CONTENT    -->
+    <div class="mainContent">
+        <!--  START  MAIN IMAGE IN THE HOME-PAGE        -->
+        <div class="imgMain">
+            <img class="imgContent" src="./assets/img/cabeleleiras.avif" alt="">
         </div>
+        <!--    END MAIN IMAGE IN THE HOME-PAGE     -->
+
+        <!--    START MAIN TEXT IN THE HOME-PAGE     -->
+        <div class="textMain">
+            <h1>Cabeleleira Leila</h1>
+            <p>Cabelos, unhas, hidratação e unha.
+                <br class="py-2">
+                Venha fazer suas unhas, seus cabelos, e até mesmo hidratar suas madeixas de cabelo conosco.
+                <br>
+                Tudo esterilizado para você não ficar mal
+            </p>
+        </div>
+        <!--    END MAIN TEXT IN THE HOME-PAGE      -->
+
     </div>
-    <hr>
-    <div class="container py-2">
-        <div class="box-endereco">
+    <!--    END MAIN CONTENT    -->
 
-            <div class="basicInfoTitle">
-                <h3>Endereço</h3>
-            </div>
-
-
-            <div class="mb-3">
-                <label for="endereco">Endereço</label>
-                <input type="text" name="endereco" id="endereco" value="">
-            </div>
-            <div class="mb-3">
-                <label for="bairro">Bairro</label>
-                <input type="text" name="bairro" id="bairro" value="">
-            </div>
-            <div class="mb-3">
-                <label for="cidade">Cidade</label>
-                <input type="text" name="cidade" id="cidade" value="">
-            </div>
-
-            <div class="mb-3">
-                <label for="estado">Estado</label>
-                <input type="text" name="estado" id="estado" value="">
-            </div>
-            <div class="mb-3">
-                <label for="cep">Cep</label>
-                <input type="text" name="cep" id="cep" value="">
-            </div>
-
-        </div>
-
-
-        <div class="container py-5">
-            <button type="submit" class="btn btn-primary">Cadastrar cliente</button>
-        </div>
+    <!--        START VIDEO ADVER ADVERTISING       -->
+    <div id="index-youtue py-5">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/bvOgTtZriLo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
+    <!--        END VIDEO ADVER ADVERTISING      -->
+</main>
 
-</form>
 
 <?php
 include "./inc/footer.php";

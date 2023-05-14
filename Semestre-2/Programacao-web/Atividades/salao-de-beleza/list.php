@@ -1,5 +1,3 @@
-
-
 <?php
 include "./inc/header.php";
 require_once "./config/conn.php";
