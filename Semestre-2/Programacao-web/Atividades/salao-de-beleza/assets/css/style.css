@@ -1,13 +1,34 @@
-footer{
-    position:fixed; 
-    bottom: 0;
-    text-align: center;
-    width: 100%;
-    background-color: aqua;
+footer {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  background-color: aqua;
 }
 
-.container .box-basicInfo{
-    display: flex;
-    flex-direction: row;
-
+/*      ids and classes*/
+.mb-3 input{
+    border-radius: 10px;
 }
+
+.insertTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.container .box-basicInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.basicInfoForm {
+  display: flex;
+  flex-direction: row;
+  gap: 10rem;
+}
+
+.basicInfoForm .mb-3 {
+  display: flex;
+  flex-direction: column;
+}
+
