@@ -62,9 +62,10 @@ $list = $stmt->fetch(PDO::FETCH_ASSOC);
 
     </div>
 
-    <hr>
 
     <div class="container py-2">
+
+        <hr>
         <div class="box-address">
 
             <div class="InfoTitle">

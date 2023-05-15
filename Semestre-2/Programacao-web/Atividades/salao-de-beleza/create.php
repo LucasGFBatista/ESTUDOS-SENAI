@@ -39,8 +39,9 @@ include "./inc/header.php";
 
         </div>
     </div>
-    <hr>
+ 
     <div class="container py-2">
+    <hr>
         <div class="box-address">
 
             <div class="InfoTitle">
