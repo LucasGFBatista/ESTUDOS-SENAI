@@ -63,10 +63,12 @@ include "./inc/header.php";
                 <div class="mb-3">
                     <label for="estado">Estado</label>
                     <input type="text" name="estado" id="estado" value="">
+
+
                 </div>
                 <div class="mb-3">
                     <label for="cep">Cep</label>
-                    <input type="text" name="cep" id="cep" value="">
+                    <input cep-mask type="text" name="cep" id="cep" maxlength="8" value="">
                 </div>
 
             </div>
@@ -78,9 +80,9 @@ include "./inc/header.php";
             <button type="submit" class="btn btn-primary">Cadastrar cliente</button>
         </div>
     </div>
-
 </form>
 
 <?php
+
 include "./inc/footer.php";
 ?>

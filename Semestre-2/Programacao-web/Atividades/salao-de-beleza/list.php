@@ -1,5 +1,6 @@
 <?php
 include "./inc/header.php";
+require_once "./config/util.php";
 require_once "./config/conn.php";
 
 //preparar
@@ -19,9 +20,13 @@ $list = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <th scope="col">ID</th>
         <th scope="col">Nome</th>
         <th scope="col">Email</th>
-        <th scope="col">Data de nascimento</th>
+        <th scope="col">Data nascimento</th>
+        <th scope="col">CEP</th>
+        <th scope="col">Logradouro</th>
+        <th scope="col">Bairro</th>
+        <th scope="col">Cidade</th>
+        <th scope="col">Estado</th>
         <th scope="col">Ações</th>
-
       </tr>
     </thead>
     <tbody>
@@ -33,6 +38,11 @@ $list = $stmt->fetchAll(PDO::FETCH_ASSOC);
           <td><?= $customer['name'] ?></td>
           <td><?= $customer['email'] ?></td>
           <td><?= $customer['birthday_date'] ?></td>
+          <td><?= mask($customer['cep'], "#####-###"); ?></td>
+          <td><?= $customer['endereco'] ?></td>
+          <td><?= $customer['bairro'] ?></td>
+          <td><?= $customer['cidade'] ?></td>
+          <td><?= $customer['estado'] ?></td>
           <td>
             <a href="update.php?id=<?= $customer['id']; ?>">Editar</a>
             |

@@ -1,5 +1,5 @@
 <?php
-require_once "./config/conn.php";
+require_once "conn.php";
 
 $id = filter_input(INPUT_POST,  'id');
 $name = filter_input(INPUT_POST, 'name');
@@ -11,7 +11,7 @@ $cidade = filter_input(INPUT_POST, 'cidade');
 $estado = filter_input(INPUT_POST, 'estado');
 $cep = filter_input(INPUT_POST, 'cep');
 
-$stmt = $conn->prepare("UPDATE cliente_salao SET name = :name, email = :email, birthday_date = :birthday_date, endereco = :endereco, bairro = :baiiro, cidade = :cidade, estado = :estado, cep = :cep WHERE id = :id");
+$stmt = $conn->prepare("UPDATE cliente SET name = :name, email = :email, birthday_date = :birthday_date, endereco = :endereco, bairro = :baiiro, cidade = :cidade, estado = :estado, cep = :cep WHERE id = :id");
 
 //trocar
 $stmt->bindValue(':name', $name);
@@ -26,13 +26,14 @@ $stmt->bindValue(':cep', $cep);
 
 $stmt->execute();
 
+/*
     echo "$id - $name - $email - $birthday_date";
     echo "<br>";
     echo "$endereco - $bairro - $cidade - $estado - $cep";
+*/
 
 
-
-header('Location: index.php');
+header('Location: ../create.php');
 
 
 

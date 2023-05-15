@@ -37,7 +37,7 @@ $stmt->execute();
 
 
 
-header('Location: ../index.php');
+header('Location: ../create.php');
 ?>
 
 <!--        -->
