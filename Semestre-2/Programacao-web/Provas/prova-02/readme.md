@@ -73,3 +73,9 @@ Fique à vontade para explorar o repositório e verificar a implementação da a
 | PIB |	https://www.preparaenem.com/geografia/pib-brasil.htm |
 | PIB |	https://www1.folha.uol.com.br/fol/eco/ex053811.htm |
 | SALARIO MINIMO |	https://www.contabeis.com.br/tabelas/salario-minimo/ |
+
+
+<!--
+Atividade proposta pelo professor Tido Ferraz [TIDOFERRAZ](https://github.com/TIDOFERRAZ).
+Realizada por Lucas Gonçalves [LucasGFBatista](https://github.com/LucasGFBatista).
+-->
