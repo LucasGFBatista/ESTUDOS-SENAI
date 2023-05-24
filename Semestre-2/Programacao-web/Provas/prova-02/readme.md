@@ -1,19 +1,46 @@
-# Pesquisar no intervalo de 5 em 5 anos e apresentar o Gráfico (1997 a 2022):
+# Atividade de Pesquisa e Gráficos
 
-[ ] 1. Salário mínimo / Preço da gasolina (Gráfico Linha)
+Neste repositório, você encontrará uma atividade que consiste em utilizar a ferramenta Google Charts para criar gráficos a partir de pesquisas de dados, como PIB, salário mínimo e valor do dólar em comparação ao real. 
 
-[ ] 2. Salário mínimo / Dólar (Gráfico Linha)
+## Desafio Proposto
 
-[ ] 3. Salário mínimo / Carro Mais Baratos (Gráfico Linha)
+O desafio proposto pelo professor foi explorar a ferramenta Google Charts, mesmo não tendo sido abordada em sala de aula. A atividade envolveu pesquisar dados, como salário mínimo, preço da gasolina, valor do dólar, carros mais baratos e cesta básica, no intervalo de 5 em 5 anos, desde 1997 até 2022. Em seguida, foi solicitado criar uma aplicação web em PHP, na qual pudéssemos cadastrar, editar e excluir os dados pesquisados. Com base nas informações adquiridas, deveríamos apresentar gráficos utilizando a ferramenta Google Charts.
 
-[ ] 4. Salário mínimo / Cesta Básica (Gráfico Linha)
+## Informações Solicitadas
 
-[ ] 5. PIB Brasil
+As informações solicitadas para cada gráfico são as seguintes:
 
-[ ] 6. Processador Xeon no Aliexpress (qualquer um), com o valor do dólar em 2014 x valor dele sem taxa x valor dele com taxa de 60% no valor hoje (Gráfico Coluna)
+- [x] 1. Salário mínimo / Preço da gasolina (Gráfico Linha)
 
-[ ] 7. Coloque todas as fontes de pesquisa como última opção do menu.
+- [x] 2. Salário mínimo / Dólar (Gráfico Linha)
 
+- [x] 3. Salário mínimo / Carro Mais Baratos (Gráfico Linha)
+
+- [x] 4. Salário mínimo / Cesta Básica (Gráfico Linha)
+
+- [x] 5. PIB Brasil (Gráfico Linha)
+
+- [ ] 6. Processador Xeon no Aliexpress (qualquer um), com o valor do dólar em 2014 x valor dele sem taxa x valor dele com taxa de 60% no valor hoje (Gráfico Coluna)
+
+- [x] 7. Fontes de Pesquisa
+
+## Painel Administrativo
+
+A atividade requer a criação de um painel administrativo para cadastrar os anos e os respectivos valores para cada gráfico. Além disso, deve ser implementado um menu lateral para facilitar a navegação no painel, direcionando para cada item da pesquisa.
+
+## Observações
+
+A seguir, estão algumas observações e requisitos obrigatórios para o desenvolvimento da atividade:
+
+- Banco de dados: O banco de dados deve ser nomeado como "dataseunome" (por exemplo, "datastido").
+- Tabela: A tabela deve ser nomeada como "graphicseunome" (por exemplo, "graphictido").
+- Colunas da tabela, names dos inputs dos formulários e variáveis do PHP: Devem seguir o padrão a seguir: "idseunome", "yearseunome", "valueseunome", etc.
+
+Fique à vontade para explorar o repositório e verificar a implementação da atividade. Em caso de dúvidas, entre em contato.
+
+<br>
+<hr>
+<br>
 
 ### DADOS SOLICITADOS
 | ANO | PIB (TRILÃO) 	| SALARIO MINIMO | GASOLINA | DOLAR 	| CARRO MAIS BARATO (GOL) | CESTA BÁSICA|
@@ -46,21 +73,3 @@
 | PIB |	https://www.preparaenem.com/geografia/pib-brasil.htm |
 | PIB |	https://www1.folha.uol.com.br/fol/eco/ex053811.htm |
 | SALARIO MINIMO |	https://www.contabeis.com.br/tabelas/salario-minimo/ |
-
-
-
-Exemplo: processador Xeon (hoje) 100,00 - 5 (dólar 2023) (Valores e taxas hipotéticos) 
-x - 2,00 (dólar 2014)
-200/5 = x
-x = R$ 40,00
-
-40 + 60% (taxa de imposto) = 24,00 + 40,00 = 64,00 (Valor final do produto caso a taxa do dólar hoje fosse igual a de 2014, acrescido do imposto de 60%). Resultado hipotético
-
-A atividade deverá ter um Painel Administrativo para cadastrar o ano e os respectivos valores para cada gráfico. Deverá ser feito um menu lateral para navegação do Painel, onde a navegação levará para cada item da pesquisa.
-
-Observações e serão obrigatórias:
-Banco de dados deverá ter o nome dataseunome (Ex.: datastido);
-Tabela deverá ter o nome graphicseunome (Ex.: graphictido);
-Colunas da tabela, names dos inputs dos formulários e variáveis do php deverão ter o nome seguindo o padrão a seguir: idseunome, yearseunome, valueseunome....
-
-
