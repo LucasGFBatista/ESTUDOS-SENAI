@@ -22,4 +22,16 @@ Este repositório contém o registro das matérias estudadas ao longo do curso t
 
 ## Terceiro Semestre
 
-### Em breve...
+### Desenvolvimento de Sistemas 02
+- 
+- 
+
+### Banco de Dados 
+- 
+- 
+### Desenvolvimento de Sistemas Mobile
+- 
+- 
+### Teste de Sistemas
+- 
+- 
