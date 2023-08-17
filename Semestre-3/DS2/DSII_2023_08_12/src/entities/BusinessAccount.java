@@ -1,11 +1,11 @@
 package entities;
 
-public class BusinessAccount extends Account{
+public class BusinessAccount extends Account {
 	private double loanLimit;
 
 	/* Constructors */
 	public BusinessAccount() {
-	super();
+		super();
 	}
 
 	public BusinessAccount(int number, String holder, double balance, double loanLimit) {
@@ -22,23 +22,17 @@ public class BusinessAccount extends Account{
 		this.loanLimit = loanLimit;
 	}
 
-	/* Methods asked on activity */
-	public void withdraw(double amount) {
-		super.setBalance(super.getBalance() - amount);
-	}
-
-	public void deposit(double amount) {
-		super.setBalance(super.getBalance() + amount);
-	}
-
 	public void loan(double amount) {
-		this.loanLimit -= amount;
+
+		if (amount <= loanLimit) {
+			balance += amount - 10.0;
+		}
 	}
-	    
+
 	    @Override
 	    public String toString(){
 	        return 
-	        "Business Account\n" +
+	        "\n\nBusiness Account" +
 	        "\nNumber: " + super.getNumber() +
 	        "\nHolder: " + super.getHolder() +
 	        "\nBalance: " +  super.getBalance() +

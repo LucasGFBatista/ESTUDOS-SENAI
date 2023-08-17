@@ -1,9 +1,9 @@
 package entities;
 
-public abstract class Account {
+public class Account {
 	private int number;
 	private String holder;
-	private double balance;
+	protected double balance;
 
 	/* Constructos */
 
@@ -11,6 +11,7 @@ public abstract class Account {
 	}
 
 	public Account(int number, String holder, double balance) {
+		super();
 		this.number = number;
 		this.holder = holder;
 		this.balance = balance;
@@ -37,9 +38,6 @@ public abstract class Account {
 		return balance;
 	}
 
-	public void setBalance(double balance) {
-		this.balance = balance;
-	}
 
 	/* Methods asked on activity */
 	public void withdraw(double amount) {
@@ -53,7 +51,7 @@ public abstract class Account {
 	@Override
     public String toString(){
         return 
-        "Business Account\n" +
+        "\n\nAccount" +
         "\nNumber: " +  this.number +
         "\nHolder: " +  this.holder +
         "\nBalance: " + this.balance;
