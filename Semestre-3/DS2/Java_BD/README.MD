@@ -25,6 +25,14 @@ Todo o código dado em sala de aula conta no repositório do [Github](https://gi
 
 Cria pacotes `DAO`, `DTO`, `VIEW`
 
+> [!info]
+>
+> **DAO** -> Data Access Object
+>
+> **DTO** -> Data transfer object
+>
+> **VIEW** -> *A _View_ , which is a collection of classes representing the elements in the user interface (all of the things the user can see and respond to on the screen, such as buttons, display boxes, and so forth)*
+
 Dentro do pacote `DAO` cria a classe `ConexaoDAO.java`, código abaixo: 
 ```JAVA
 package DAO;
