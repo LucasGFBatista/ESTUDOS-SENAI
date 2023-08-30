@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author lucas
+ * @author Lucas Gonçalves
  */
 public class ConexaoDAO {
     public Connection conectaBd( ){
