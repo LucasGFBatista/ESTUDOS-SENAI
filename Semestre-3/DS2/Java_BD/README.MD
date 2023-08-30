@@ -24,6 +24,7 @@ Todo o código dado em sala de aula conta no repositório do [Github](https://gi
 ![Content tree docs from class](image.png)
 
 Cria pacotes `DAO`, `DTO`, `VIEW`
+
 Dentro do pacote `DAO` cria a classe `ConexaoDAO.java`, código abaixo: 
 ```JAVA
 package DAO;
