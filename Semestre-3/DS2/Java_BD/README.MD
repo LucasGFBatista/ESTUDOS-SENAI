@@ -5,9 +5,9 @@ title: DSII-2023-08-2029
 institute: Senai
 course: Desenvolvimento de Sistemas
 period: 3
-subject: 
-aliases: 
-status: 
+subject: Desenvolvimento de Sistemas 2
+aliases: Conexão com Bannco de dados em Java
+status: Done
 Tags: educacao/senai/ds2
 ---
 [[Journal/2023-08-29|2023-08-29]]
