@@ -66,6 +66,9 @@ public class ConexaoDAO {
 
 Dentro da pasta `Project Files` tem um arquivo `pom.xml`, que deve ser inserido o seguinte codigo, entre `</packing>` e `<properties>`
 
+> [!note]
+> POM: Project Object Model
+
 ```XML
     <dependencies>
         <dependency>
