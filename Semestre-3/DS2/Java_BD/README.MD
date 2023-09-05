@@ -100,3 +100,38 @@ O que fica por completo:
     </properties>
 </project>
 ```
+
+# DSII-2023-09-05
+
+- No pacote `VIEW` cria um `jframe` chamado **`frmFuncioonario.java`**
+- No pacocte `DAO` cria uma classe chamada **`FuncionarioDAO.java`**
+- E no pacote `DTO` cria a classe **`FuncionarioDTO.java`** 
+ 
+![Alt text](image-1.png)
+
+**FuncnionarioDTO.java**
+
+```java
+public class FuncionarioDTO {
+private nome_funcionaro, cidade_funcionario;
+
+// encapsula os atributo
+}
+```
+
+**FuncionarioDAO.java**
+![Alt text](image-4.png)
+
+**frmFuncionario.java**
+![Alt text](image-2.png)
+```java
+private void btncadastrarActionPerformed(java.awt.event.ActionEvent evt){
+String nome, cidade;
+
+nome = txtnome.getText();
+cidade = txtCidade.getText();
+
+FuncionarioDTO objfuncionariodto = new FuncionarioDTO();
+}
+```
+

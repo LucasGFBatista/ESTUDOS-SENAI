@@ -5,4 +5,3 @@ Este curso se concentra na aplicação de técnicas de teste para garantir que o
 
 ## Tópicos
 
-1.

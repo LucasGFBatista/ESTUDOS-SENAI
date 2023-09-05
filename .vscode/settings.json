@@ -45,5 +45,8 @@
     "**/.*/**",
     "**/.vscode",
     "**/.vscode/**"
-  ]
+  ],
+  "workbench.tree.renderIndentGuides": "always",
+  "editor.guides.bracketPairs": "active",
+  "editor.guides.highlightActiveBracketPair": true
 }
