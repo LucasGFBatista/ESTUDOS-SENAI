@@ -232,7 +232,7 @@ public class FuncionarioDAO {
 
 Em `frmFuncionario` apenas modificamos o metodo que chama um objeto de `FuncionarioDAO`
 
-![Alt text](/doc/image/image-2.png)
+![Alt text](doc/image/image-2.png)
 
 ```java
     private void btncadastrarActionPerformed(java.awt.event.ActionEvent evt) {                                             
