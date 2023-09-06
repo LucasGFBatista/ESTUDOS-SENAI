@@ -12,8 +12,6 @@ Tags: educacao/senai/ds2
 ---
 [[Journal/2023-08-29|2023-08-29]]
 Ref: #ref/2023
-
-
 ___
 # DSII-2023-08-2029
 
@@ -21,7 +19,7 @@ Todo o código dado em sala de aula conta no repositório do [Github](https://gi
 
 ## Código da aula
 
-![Content tree docs from class](image.png)
+![Content tree docs from class](/doc/image/image.png)
 
 Cria pacotes `DAO`, `DTO`, `VIEW`
 
@@ -110,31 +108,109 @@ O que fica por completo:
 - No pacocte `DAO` cria uma classe chamada **`FuncionarioDAO.java`**
 - E no pacote `DTO` cria a classe **`FuncionarioDTO.java`** 
  
-![Alt text](image-1.png)
+![Alt text](/doc/image/image-1.png)
 
 **FuncnionarioDTO.java**
 
-```java
-public class FuncionarioDTO {
-private nome_funcionaro, cidade_funcionario;
+Cria classe `FuncionarioDTO` e apenas dois atributo do tipo String `nome_funcionario` e `cidade_funcionario`. Depois só encapsula os atributos da classe.
 
-// encapsula os atributo
+```java
+package DTO;
+
+/**
+ *
+ * @author lucas Gonçalves
+ */
+public class FuncionarioDTO {
+	private String nome_funcionario, cidade_funcionario;
+
+	public String getNome_funcionario() {
+		return nome_funcionario;
+	}
+
+	public void setNome_funcionario(String nome_funcionario) {
+		this.nome_funcionario = nome_funcionario;
+	}
+
+	public String getCidade_funcionario() {
+		return cidade_funcionario;
+	}
+
+	public void setCidade_funcionario(String cidade_funcionario) {
+		this.cidade_funcionario = cidade_funcionario;
+	}
+	
+	
 }
 ```
 
 **FuncionarioDAO.java**
-![Alt text](image-4.png)
+
+Em `FuncionarioDAO` enviamos os dados do usairio para o banco de dados. 
+
+Foi criada o atributo `conn` do tipo `Connection` (que é um tipo não primitivo de Java, utilizado para conexão com banco de dados).
+
+Cria também o atributo `pstm` do tipo `PreparedStatement` (outro tipo não primitivo do Java, utilizado para executar comandos SQL).
+
+Cria o metodo `cadastrarfuncionario` do tipo `void`, e como parametro um obejto `objfunconariodto` do tipo `FuncionarioDTO` (classe que foi criada aneriormente)
+
+![Alt text](image.png)
+
+```java
+package DAO;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import javax.swing.JOptionPane;
+
+import DTO.FuncionarioDTO;
+
+public class FuncionarioDAO {
+	Connection conn;
+	PreparedStatement pstm;
+
+	public void cadastrarFuncionario(FuncionarioDTO objfuncionariodto) {
+		String sql = "insert into tabela (nome, cidade) values (?,?)";
+
+		conn = new ConexaoDAO().conectaBd();
+
+		try {
+			pstm = conn.prepareStatement(sql);
+			pstm.setString(1, objfuncionariodto.getNome_funcionario());
+			pstm.setString(2, objfuncionariodto.getCidade_funcionario());
+
+			pstm.execute();
+			pstm.close();
+
+		} catch (Exception erro) {
+			JOptionPane.showMessageDialog(null, "Classe FuncionarioDAO" + erro);
+		}
+
+	}
+}
+
+```
+
 
 **frmFuncionario.java**
-![Alt text](image-2.png)
+
+Em `frmFuncionario` apenas modificamos o metodo que chama um objeto de `FuncionarioDAO`
+
+![Alt text](/doc/image/image-2.png)
+
 ```java
-private void btncadastrarActionPerformed(java.awt.event.ActionEvent evt){
-String nome, cidade;
-
-nome = txtnome.getText();
-cidade = txtCidade.getText();
-
-FuncionarioDTO objfuncionariodto = new FuncionarioDTO();
-}
+    private void btncadastrarActionPerformed(java.awt.event.ActionEvent evt) {                                             
+        String nome, cidade;
+        nome = txtnome.getText();
+        cidade = txtcidade.getText();
+        
+        FuncionarioDTO objfuncionariodto = new FuncionarioDTO();
+        objfuncionariodto.setNome_funcionario(nome);
+        objfuncionariodto.setCidade_funcionario(cidade);
+        
+       FuncionarioDAO objfuncionariodao = new FuncionarioDAO();
+       objfuncionariodao.cadastrarFuncionario(objfuncionariodto);
+    }           
 ```
 
