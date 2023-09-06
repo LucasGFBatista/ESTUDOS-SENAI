@@ -13,13 +13,48 @@ Tags: educacao/senai/ds2
 [[Journal/2023-08-29|2023-08-29]]
 Ref: #ref/2023
 ___
-# DSII-2023-08-2029
+## Como clonar repositorio e utilizar o código em sua maquina
+
+Abra a *Executar* do windows utilizando as teclas `windows + R`, depois digite `cmd` e clicar em `OK`, como na imagem abaixo:
+
+![Alt text](/doc/image/image-4.png)
+
+![CMD](doc/image/cmd.png)
+Depois é só escolher o local em que deseja salvar o repositorio clonado. Por exemplo, caso queira criar uma pasta na area de trabalho (`desktop`) é só seguir os comandos abaixo:
+```cmd
+//acessar area de trabalho
+cd desktop 
+
+//irá criar uma pasta
+mkdir nome_pasta
+
+//acessar pasta crida
+cd nome_pasta
+```
+![cmd-comandos](doc/image/cmd-comandos.png)
+
+Para pegar o link do reposritorio no Github, é necessario ir na [pasta princpal](https://github.com/LucasGFBatista/ESTUDOS-SENAI). 
+![radical-repo](doc/image/radical-repo.png)
+Depois clica em `Code`, o botão verde `1`.
+Depois clica no botão `2` para copiar o link.
+![pegar-link](doc/image/pegar-link.png)
+
+Após copiar o link, volta para o `cmd` e digita os comandos abaixo.
+```bash
+git clone https://github.com/LucasGFBatista/ESTUDOS-SENAI.git
+```
+Terá esse resultado abaixo:
+![Resultado git clone](doc/image/git-clone.png)
+
+Agora no `cmd` é abrir a pastar utilizando o comando `start nome_pasta` e seguir da forma que você aprendeu para abrir o proejto na IDE de sua preferencia.
+
+# DSII-2023-08-29
 
 Todo o código dado em sala de aula conta no repositório do [Github](https://github.com/LucasGFBatista/ESTUDOS-SENAI/tree/master/Semestre-3/DS2/Java_BD).
 
 ## Código da aula
 
-![Content tree docs from class](/doc/image/image.png)
+![Content tree docs from class](doc/image/image.png)
 
 Cria pacotes `DAO`, `DTO`, `VIEW`
 
@@ -108,7 +143,7 @@ O que fica por completo:
 - No pacocte `DAO` cria uma classe chamada **`FuncionarioDAO.java`**
 - E no pacote `DTO` cria a classe **`FuncionarioDTO.java`** 
  
-![Alt text](/doc/image/image-1.png)
+![Alt text](doc/image/image-1.png)
 
 **FuncnionarioDTO.java**
 
@@ -154,7 +189,7 @@ Cria também o atributo `pstm` do tipo `PreparedStatement` (outro tipo não prim
 
 Cria o metodo `cadastrarfuncionario` do tipo `void`, e como parametro um obejto `objfunconariodto` do tipo `FuncionarioDTO` (classe que foi criada aneriormente)
 
-![Alt text](image.png)
+![Alt text](doc/image/image-03.png)
 
 ```java
 package DAO;
