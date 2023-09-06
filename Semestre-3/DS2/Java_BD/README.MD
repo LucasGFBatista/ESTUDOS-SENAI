@@ -19,7 +19,7 @@ Todo o código dado em sala de aula conta no repositório do [Github](https://gi
 
 ## Código da aula
 
-![Content tree docs from class](../doc/image/image.png)
+![Content tree docs from class](doc/image/image.png)
 
 Cria pacotes `DAO`, `DTO`, `VIEW`
 
