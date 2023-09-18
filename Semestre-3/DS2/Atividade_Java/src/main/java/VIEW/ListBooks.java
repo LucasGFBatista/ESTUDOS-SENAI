@@ -9,6 +9,8 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
+import java.awt.Color;
+import java.awt.Font;
 
 public class ListBooks extends JFrame {
 
@@ -16,6 +18,10 @@ public class ListBooks extends JFrame {
     private JTable tableBooks;
 
     public ListBooks() {
+    	
+
+    	
+    	
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 600, 400);
         ListBookScreen = new JPanel();
@@ -24,12 +30,11 @@ public class ListBooks extends JFrame {
         ListBookScreen.setLayout(null);
         
         JScrollPane scrollPane = new JScrollPane();
-        scrollPane.setBounds(10, 40, 564, 300);
+        scrollPane.setBounds(10, 69, 564, 271);
         ListBookScreen.add(scrollPane);
         
-        tableBooks = new JTable();
-        scrollPane.setViewportView(tableBooks);
-
+        
+    	//Botão retornar
         JButton btnReturn = new JButton("← Retornar");
         btnReturn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -38,8 +43,21 @@ public class ListBooks extends JFrame {
                 dispose();
             }
         });
-        btnReturn.setBounds(10, 10, 110, 25);
+        btnReturn.setBounds(10, 10, 110, 30);
         ListBookScreen.add(btnReturn);
+        
+        
+        tableBooks = new JTable();
+        scrollPane.setViewportView(tableBooks);
+
+
+        
+        JTextArea txtH1 = new JTextArea();
+        txtH1.setFont(new Font("Monospaced", Font.BOLD, 24));
+        txtH1.setBackground(new Color(240, 240, 240));
+        txtH1.setText("Lista de Livros");
+        txtH1.setBounds(150, 10, 230, 40);
+        ListBookScreen.add(txtH1);
 
         populateTable();
     }
@@ -49,15 +67,15 @@ public class ListBooks extends JFrame {
         List<BookDTO> books = bookDAO.getAllBooks();
 
         String[][] data = new String[books.size()][5];
-        String[] columnNames = {"ID", "Título", "Autor", "Ano Publicação", "ISBN", "Excluir"};
+        String[] columnNames = {"ISBN","Título", "Autor", "Ano Publicação",  "Excluir"};
 
         for (int i = 0; i < books.size(); i++) {
             BookDTO book = books.get(i);
-            data[i][0] = String.valueOf(book.getId());
+            data[i][0] = book.getIsbn();
             data[i][1] = book.getTitulo();
             data[i][2] = book.getAutor();
             data[i][3] = String.valueOf(book.getAnoPublicacao());
-            data[i][4] = book.getIsbn();
+            
             //data[i][5] = "Excluir";
         }
 

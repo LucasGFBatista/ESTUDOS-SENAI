@@ -16,6 +16,7 @@ import javax.swing.JTextField;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import java.awt.FlowLayout;
+import javax.swing.JTextPane;
 
 public class SearchBook extends JFrame {
 
@@ -56,9 +57,9 @@ public class SearchBook extends JFrame {
 
 		JTextArea txtH1 = new JTextArea();
 		txtH1.setText("Pesquisar Livro");
-		txtH1.setFont(new Font("Monospaced", Font.PLAIN, 24));
+		txtH1.setFont(new Font("Monospaced", Font.BOLD, 24));
 		txtH1.setBackground(UIManager.getColor("Button.background"));
-		txtH1.setBounds(118, 11, 215, 37);
+		txtH1.setBounds(150, 10, 230, 37);
 		SearchScreen.add(txtH1);
 
 		JButton btnReturn = new JButton("← Retornar");
@@ -77,7 +78,7 @@ public class SearchBook extends JFrame {
 		SearchScreen.add(lblTitulo);
 
 		textField = new JTextField();
-		textField.setBounds(129, 59, 200, 20);
+		textField.setBounds(160, 59, 200, 20);
 		SearchScreen.add(textField);
 
 		JLabel lblAutor = new JLabel("Autor");
@@ -85,15 +86,15 @@ public class SearchBook extends JFrame {
 		SearchScreen.add(lblAutor);
 
 		textField_1 = new JTextField();
-		textField_1.setBounds(129, 99, 200, 20);
+		textField_1.setBounds(160, 99, 200, 20);
 		SearchScreen.add(textField_1);
 
 		JLabel lblAnoPublicacao = new JLabel("Ano Publicação");
-		lblAnoPublicacao.setBounds(29, 139, 100, 20);
+		lblAnoPublicacao.setBounds(29, 139, 80, 20);
 		SearchScreen.add(lblAnoPublicacao);
 
 		textField_2 = new JTextField();
-		textField_2.setBounds(129, 139, 200, 20);
+		textField_2.setBounds(160, 139, 200, 20);
 		SearchScreen.add(textField_2);
 
 		JLabel lblISBN = new JLabel("ISBN");
@@ -101,11 +102,11 @@ public class SearchBook extends JFrame {
 		SearchScreen.add(lblISBN);
 
 		textField_3 = new JTextField();
-		textField_3.setBounds(129, 179, 200, 20);
+		textField_3.setBounds(160, 179, 200, 20);
 		SearchScreen.add(textField_3);
 
 		JButton btnPesquisar = new JButton("Pesquisar");
-		btnPesquisar.setBounds(119, 219, 110, 30);
+		btnPesquisar.setBounds(160, 220, 110, 30);
 		SearchScreen.add(btnPesquisar);
 	}
 }

@@ -14,6 +14,7 @@ public class BookDAO {
 	Connection conn;
 	PreparedStatement pstm;
 
+	//INSERIR LIVRO
 	public void insertBook(BookDTO objBookDTO) {
 		String sql = "insert into livros (Titulo, Autor, AnoPublicacao, ISBN) values (?,?,?,?)";
 
@@ -35,6 +36,8 @@ public class BookDAO {
 
 	}
 
+	
+	//LISTAR LIVROS
     public List<BookDTO> getAllBooks() {
         List<BookDTO> books = new ArrayList<>();
 
@@ -64,5 +67,11 @@ public class BookDAO {
         return books;
     }
 	
+    
+    public List<BookDTO> getSomeBooks(){
+    	List<BookDTO> books = new ArrayList<>();
+    	
+    	String sql = "SELECT Titulo, Autor, AnoPublicacao, ISBN FROM livros WHERE ISBN = ?";
+    }
 	
 }

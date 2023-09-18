@@ -41,9 +41,9 @@ public class CreateBook extends JFrame {
 		// Título da Janela
 		JTextArea h1CadastrarLivro = new JTextArea();
 		h1CadastrarLivro.setBackground(new Color(240, 240, 240));
-		h1CadastrarLivro.setFont(new Font("Monospaced", Font.BOLD, 22));
+		h1CadastrarLivro.setFont(new Font("Monospaced", Font.BOLD, 24));
 		h1CadastrarLivro.setText("Cadastrar Livro");
-		h1CadastrarLivro.setBounds(150, 10, 206, 40);
+		h1CadastrarLivro.setBounds(150, 10, 230, 40);
 		CadastrarLivro.add(h1CadastrarLivro);
 
 		// Campos e Labels
@@ -76,15 +76,17 @@ public class CreateBook extends JFrame {
 		CadastrarLivro.add(txtISBN);
 
 		// Botões
+		//Botao cadastrar
 		JButton btnCadastrar = new JButton("Cadastrar");
 		btnCadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnCadastrarBookActionPerformed(e);
 			}
 		});
-		btnCadastrar.setBounds(160, 230, 110, 30);
+		btnCadastrar.setBounds(150, 221, 110, 30);
 		CadastrarLivro.add(btnCadastrar);
 
+		//botão retornar
 		JButton btnRetornar = new JButton("← Retornar");
 		btnRetornar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -96,7 +98,7 @@ public class CreateBook extends JFrame {
 		CadastrarLivro.add(btnRetornar);
 	}
 
-	// BOTÃO CADASTRAR LIVROS NO BANCO DE DADOS
+	// Função de BOTÃO CADASTRAR LIVROS NO BANCO DE DADOS
 	private void btnCadastrarBookActionPerformed(java.awt.event.ActionEvent e) {
 		String titulo, autor, isbn;
 		int anoPublicacao;
@@ -114,6 +116,9 @@ public class CreateBook extends JFrame {
 
 		BookDAO objBookDAO = new BookDAO();
 		objBookDAO.insertBook(objBookDTO);
+		
+		MainScreen mainScreenFrama = new MainScreen();
+		mainScreenFrama.setVisible(true);
 	}
 
 }
