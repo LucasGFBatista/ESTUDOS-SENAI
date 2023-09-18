@@ -3,6 +3,7 @@ package VIEW;
 
 import DAO.FuncionarioDAO;
 import DTO.FuncionarioDTO;
+import java.awt.Toolkit;
 
 /**
  *
@@ -14,6 +15,7 @@ public class frmFuncionario extends javax.swing.JFrame {
      * Creates new form frmFuncionario
      */
     public frmFuncionario() {
+    	setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\lucas\\Downloads\\Nova pasta\\3x4.jpg"));
         initComponents();
     }
 
