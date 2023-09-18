@@ -12,20 +12,20 @@ import java.util.List;
 
 public class ListBooks extends JFrame {
 
-    private JPanel contentPane;
+    private JPanel ListBookScreen;
     private JTable tableBooks;
 
     public ListBooks() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 600, 400);
-        contentPane = new JPanel();
-        contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-        setContentPane(contentPane);
-        contentPane.setLayout(null);
+        ListBookScreen = new JPanel();
+        ListBookScreen.setBorder(new EmptyBorder(5, 5, 5, 5));
+        setContentPane(ListBookScreen);
+        ListBookScreen.setLayout(null);
         
         JScrollPane scrollPane = new JScrollPane();
         scrollPane.setBounds(10, 40, 564, 300);
-        contentPane.add(scrollPane);
+        ListBookScreen.add(scrollPane);
         
         tableBooks = new JTable();
         scrollPane.setViewportView(tableBooks);
@@ -39,7 +39,7 @@ public class ListBooks extends JFrame {
             }
         });
         btnReturn.setBounds(10, 10, 110, 25);
-        contentPane.add(btnReturn);
+        ListBookScreen.add(btnReturn);
 
         populateTable();
     }
@@ -58,7 +58,7 @@ public class ListBooks extends JFrame {
             data[i][2] = book.getAutor();
             data[i][3] = String.valueOf(book.getAnoPublicacao());
             data[i][4] = book.getIsbn();
-            data[i][5] = "Excluir";
+            //data[i][5] = "Excluir";
         }
 
         tableBooks.setModel(new DefaultTableModel(data, columnNames) {

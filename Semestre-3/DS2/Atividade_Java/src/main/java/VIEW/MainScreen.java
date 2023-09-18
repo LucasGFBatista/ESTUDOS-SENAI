@@ -61,7 +61,8 @@ public class MainScreen extends JFrame {
 		JButton btnPesquisar = new JButton("Pesquisar Livros");
 		btnPesquisar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				// Ação ao clicar no botão Pesquisar
+				SearchBook searchBook = new SearchBook();
+				searchBook.setVisible(true);
 			}
 		});
 		btnPesquisar.setBounds(140, 110, 150, 30);
