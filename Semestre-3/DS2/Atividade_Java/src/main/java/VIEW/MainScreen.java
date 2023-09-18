@@ -50,7 +50,8 @@ public class MainScreen extends JFrame {
 		JButton btnVisualizar = new JButton("Visualizar Livros");
 		btnVisualizar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				// Ação ao clicar no botão Visualizar
+				ListBooks listBooksFrame = new ListBooks();
+	            listBooksFrame.setVisible(true);
 			}
 		});
 		btnVisualizar.setBounds(140, 70, 150, 30);
