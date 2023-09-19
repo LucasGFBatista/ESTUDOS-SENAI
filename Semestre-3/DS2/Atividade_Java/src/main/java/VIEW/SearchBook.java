@@ -5,15 +5,21 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import DAO.BookDAO;
+import DTO.BookDTO;
+
 import javax.swing.JTextArea;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
 
 import javax.swing.UIManager;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JButton;
 import java.awt.FlowLayout;
 import javax.swing.JTextPane;
@@ -105,8 +111,43 @@ public class SearchBook extends JFrame {
 		textField_3.setBounds(160, 179, 200, 20);
 		SearchScreen.add(textField_3);
 
+		//botão de pesquisar
 		JButton btnPesquisar = new JButton("Pesquisar");
 		btnPesquisar.setBounds(160, 220, 110, 30);
 		SearchScreen.add(btnPesquisar);
+		btnPesquisar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				BookDAO bookDAO = new BookDAO();
+
+				String titulo = textField.getText().isEmpty() ? null : textField.getText();
+				String autor = textField_1.getText().isEmpty() ? null : textField_1.getText();
+				String anoStr = textField_2.getText().isEmpty() ? null : textField_2.getText();
+				String isbn = textField_3.getText().isEmpty() ? null : textField_3.getText();
+
+				try {
+					if (anoStr != null) {
+					}
+				} catch (NumberFormatException ex) {
+					JOptionPane.showMessageDialog(null, "Ano inválido. Por favor, insira um ano válido.");
+					return;
+				}
+
+				List<BookDTO> books = bookDAO.searchBooks(isbn, autor, titulo);
+				if (!books.isEmpty()) {
+
+					String message = "Livros encontrados:\n";
+					for (BookDTO book : books) {
+						message += "Título: " + book.getTitulo() + ", Autor: " + book.getAutor() + ", Ano: "
+								+ book.getAnoPublicacao() + ", ISBN: " + book.getIsbn() + "\n";
+					}
+					JOptionPane.showMessageDialog(null, message);
+				} else {
+					JOptionPane.showMessageDialog(null, "Nenhum livro encontrado.");
+				}
+			}
+		});
+		btnPesquisar.setBounds(160, 220, 110, 30);
+		SearchScreen.add(btnPesquisar);
 	}
+
 }

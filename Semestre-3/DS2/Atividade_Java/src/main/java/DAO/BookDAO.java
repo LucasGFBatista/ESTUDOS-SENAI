@@ -68,10 +68,60 @@ public class BookDAO {
     }
 	
     
-    public List<BookDTO> getSomeBooks(){
-    	List<BookDTO> books = new ArrayList<>();
-    	
-    	String sql = "SELECT Titulo, Autor, AnoPublicacao, ISBN FROM livros WHERE ISBN = ?";
+    public List<BookDTO> searchBooks(String isbn, String autor, String titulo){
+        List<BookDTO> books = new ArrayList<>();
+        
+        StringBuilder sql = new StringBuilder("SELECT Titulo, Autor, AnoPublicacao, ISBN FROM livros WHERE 1=1");
+        
+       
+        if (isbn != null && !isbn.isEmpty()) {
+            sql.append(" AND ISBN = ?");
+        }
+        if (autor != null && !autor.isEmpty()) {
+            sql.append(" AND Autor = ?");
+        }
+        if (titulo != null && !titulo.isEmpty()) {
+            sql.append(" AND Titulo = ?");
+        }
+        
+        conn = new ConnectionDAO().connectBd();
+
+        try {
+            pstm = conn.prepareStatement(sql.toString());
+            
+            int parameterIndex = 1;
+            
+            if (isbn != null && !isbn.isEmpty()) {
+                pstm.setString(parameterIndex++, isbn);
+            }
+            if (autor != null && !autor.isEmpty()) {
+                pstm.setString(parameterIndex++, autor);
+            }
+            if (titulo != null && !titulo.isEmpty()) {
+                pstm.setString(parameterIndex++, titulo);
+            }
+            
+            ResultSet rs = pstm.executeQuery();
+            
+            while(rs.next()) {
+                BookDTO book = new BookDTO();
+                book.setTitulo(rs.getString("Titulo"));
+                book.setAutor(rs.getString("Autor"));
+                book.setAnoPublicacao(rs.getInt("AnoPublicacao"));
+                book.setIsbn(rs.getString("ISBN"));
+                
+                books.add(book);
+            }
+            
+            rs.close();
+            pstm.close();
+            
+        } catch (Exception erro) {
+            JOptionPane.showMessageDialog(null, "Classe BookDAO: " + erro);
+        }
+        
+        return books;
     }
+
 	
 }
