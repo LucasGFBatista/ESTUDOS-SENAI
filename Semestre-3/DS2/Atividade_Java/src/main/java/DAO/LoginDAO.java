@@ -1,5 +1,9 @@
 package DAO;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
 public class LoginDAO {
 	
 	public boolean validateUser (String userName, String password) {

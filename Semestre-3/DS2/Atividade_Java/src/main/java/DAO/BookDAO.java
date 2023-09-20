@@ -14,7 +14,7 @@ public class BookDAO {
 	Connection conn;
 	PreparedStatement pstm;
 
-	//INSERIR LIVRO
+	//CREATE BOOK
 	public void insertBook(BookDTO objBookDTO) {
 		String sql = "insert into livros (Titulo, Autor, AnoPublicacao, ISBN) values (?,?,?,?)";
 
@@ -37,7 +37,7 @@ public class BookDAO {
 	}
 
 	
-	//LISTAR LIVROS
+	//LIST ALL BOOKS
     public List<BookDTO> getAllBooks() {
         List<BookDTO> books = new ArrayList<>();
 
@@ -67,7 +67,7 @@ public class BookDAO {
         return books;
     }
 	
-    
+    //SEARCH BOOK BY ONE OF THE INFORMATIONS
     public List<BookDTO> searchBooks(String isbn, String autor, String titulo){
         List<BookDTO> books = new ArrayList<>();
         
@@ -122,6 +122,30 @@ public class BookDAO {
         
         return books;
     }
+    
+    //UPDATE BOOK
+    private void updateBook(BookDTO objBookDTO) {
+    	
+    String sql = "UPDATE livros set ISBN = ?, Titulo = ?, Autor = ?, AnoPublicacao = ? WHERE id = ?";
+    	
+    conn = new ConnectionDAO().connectBd();
+    
+	try {
+		pstm = conn.prepareStatement(sql);
+		pstm.setString(1, objBookDTO.getTitulo());
+		pstm.setString(2, objBookDTO.getAutor());
+		pstm.setInt(3, objBookDTO.getAnoPublicacao());
+		pstm.setString(4, objBookDTO.getIsbn());
+
+		pstm.execute();
+		pstm.close();
+
+	} catch (Exception erro) {
+		JOptionPane.showMessageDialog(null, "Classe BookDAO" + erro);
+	}
+    	
+    }
+    
 
 	
 }

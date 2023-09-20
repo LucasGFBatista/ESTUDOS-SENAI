@@ -71,6 +71,7 @@ public class ListBooks extends JFrame {
 
     }
 
+    //MOSTRAR TABELA
     private void populateTable() {
         BookDAO bookDAO = new BookDAO();
         List<BookDTO> books = bookDAO.getAllBooks();
@@ -78,14 +79,15 @@ public class ListBooks extends JFrame {
 
 
         String[][] data = new String[books.size()][5];
-        String[] columnNames = {"ISBN","Título", "Autor", "Ano Publicação", "Ações"};
+        String[] columnNames = {" ","ISBN","Título", "Autor", "Ano Publicação", "Ações"};
 
         for (int i = 0; i < books.size(); i++) {
             BookDTO book = books.get(i);
-            data[i][0] = book.getIsbn();
-            data[i][1] = book.getTitulo();
-            data[i][2] = book.getAutor();
-            data[i][3] = String.valueOf(book.getAnoPublicacao());
+            data[i][0] = String.valueOf(book.getId());
+            data[i][1] = book.getIsbn();
+            data[i][2] = book.getTitulo();
+            data[i][3] = book.getAutor();
+            data[i][4] = String.valueOf(book.getAnoPublicacao());
             
             
 
