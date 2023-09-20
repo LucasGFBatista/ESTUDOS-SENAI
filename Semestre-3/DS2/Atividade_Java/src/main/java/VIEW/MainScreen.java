@@ -39,6 +39,7 @@ public class MainScreen extends JFrame {
 		setContentPane(MainScreen);
 
 		JTextArea txtH1 = new JTextArea();
+		txtH1.setEditable(false);
 		txtH1.setFont(new Font("Monospaced", Font.BOLD, 25));
 		txtH1.setBackground(new Color(240, 240, 240));
 		txtH1.setText("Menu Livros");

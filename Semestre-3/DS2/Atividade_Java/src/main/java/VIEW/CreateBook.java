@@ -40,6 +40,7 @@ public class CreateBook extends JFrame {
 
 		// Título da Janela
 		JTextArea h1CadastrarLivro = new JTextArea();
+		h1CadastrarLivro.setEditable(false);
 		h1CadastrarLivro.setBackground(new Color(240, 240, 240));
 		h1CadastrarLivro.setFont(new Font("Monospaced", Font.BOLD, 24));
 		h1CadastrarLivro.setText("Cadastrar Livro");
@@ -83,7 +84,7 @@ public class CreateBook extends JFrame {
 				btnCadastrarBookActionPerformed(e);
 			}
 		});
-		btnCadastrar.setBounds(150, 221, 110, 30);
+		btnCadastrar.setBounds(150, 220, 110, 30);
 		CadastrarLivro.add(btnCadastrar);
 
 		//botão retornar

@@ -48,26 +48,37 @@ public class ListBooks extends JFrame {
         
         
         tableBooks = new JTable();
+        tableBooks.setEnabled(false);
+        tableBooks.setCellSelectionEnabled(true);
         scrollPane.setViewportView(tableBooks);
 
 
         
         JTextArea txtH1 = new JTextArea();
+        txtH1.setEditable(false);
         txtH1.setFont(new Font("Monospaced", Font.BOLD, 24));
         txtH1.setBackground(new Color(240, 240, 240));
         txtH1.setText("Lista de Livros");
         txtH1.setBounds(150, 10, 230, 40);
         ListBookScreen.add(txtH1);
 
+        /*
+
+        */
         populateTable();
+        
+        
+
     }
 
     private void populateTable() {
         BookDAO bookDAO = new BookDAO();
         List<BookDTO> books = bookDAO.getAllBooks();
+        
+
 
         String[][] data = new String[books.size()][5];
-        String[] columnNames = {"ISBN","Título", "Autor", "Ano Publicação",  "Excluir"};
+        String[] columnNames = {"ISBN","Título", "Autor", "Ano Publicação", "Ações"};
 
         for (int i = 0; i < books.size(); i++) {
             BookDTO book = books.get(i);
@@ -76,7 +87,8 @@ public class ListBooks extends JFrame {
             data[i][2] = book.getAutor();
             data[i][3] = String.valueOf(book.getAnoPublicacao());
             
-            //data[i][5] = "Excluir";
+            
+
         }
 
         tableBooks.setModel(new DefaultTableModel(data, columnNames) {
@@ -87,6 +99,6 @@ public class ListBooks extends JFrame {
             }
         });
         
-        // Aqui você adicionará a funcionalidade de exclusão.
+        // Adcionar a lógica de exclusão
     }
 }

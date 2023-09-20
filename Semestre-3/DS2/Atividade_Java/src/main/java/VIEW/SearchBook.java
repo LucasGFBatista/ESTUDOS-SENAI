@@ -62,6 +62,7 @@ public class SearchBook extends JFrame {
 		SearchScreen.setLayout(null);
 
 		JTextArea txtH1 = new JTextArea();
+		txtH1.setEditable(false);
 		txtH1.setText("Pesquisar Livro");
 		txtH1.setFont(new Font("Monospaced", Font.BOLD, 24));
 		txtH1.setBackground(UIManager.getColor("Button.background"));
