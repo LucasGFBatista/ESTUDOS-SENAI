@@ -1,3 +1,15 @@
 #  Atividade_Java
 
-Add instructions for project developers here.
+## Login
+### LoginScreen
+
+## Book
+## BookDAO
+- [X] CREATE 
+- [X] READ
+- [X] UPDATE
+- [ ] DELETE
+ 
+## ListBooks
+- [ ] UPDATE
+- [ ] DELETE
