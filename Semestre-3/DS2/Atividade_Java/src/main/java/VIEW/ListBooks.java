@@ -39,6 +39,7 @@ public class ListBooks extends JFrame {
         btnReturn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 MainScreen mainScreen = new MainScreen();
+                ListBooks.this.dispose();
                 mainScreen.setVisible(true);
                 dispose();
             }

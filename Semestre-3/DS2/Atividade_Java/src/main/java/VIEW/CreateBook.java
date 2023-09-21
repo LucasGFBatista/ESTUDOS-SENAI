@@ -92,6 +92,7 @@ public class CreateBook extends JFrame {
 		btnRetornar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				MainScreen mainScreenFrama = new MainScreen();
+				CreateBook.this.dispose();
 				mainScreenFrama.setVisible(true);
 			}
 		});
@@ -119,6 +120,7 @@ public class CreateBook extends JFrame {
 		objBookDAO.insertBook(objBookDTO);
 		
 		MainScreen mainScreenFrama = new MainScreen();
+		CreateBook.this.dispose();
 		mainScreenFrama.setVisible(true);
 	}
 

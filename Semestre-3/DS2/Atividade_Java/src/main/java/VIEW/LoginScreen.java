@@ -47,39 +47,38 @@ public class LoginScreen extends JFrame {
 		setBounds(100, 100, 650, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+
 		JLabel lblLogin = new JLabel("Login");
 		lblLogin.setFont(new Font("Tahoma", Font.BOLD, 20));
 		lblLogin.setBounds(188, 33, 65, 30);
 		contentPane.add(lblLogin);
-		
+
 		JLabel lblSenha = new JLabel("Senha");
 		lblSenha.setFont(new Font("Tahoma", Font.BOLD, 20));
 		lblSenha.setBounds(188, 122, 71, 33);
 		contentPane.add(lblSenha);
-		
+
 		JFormattedTextField formattedTextField = new JFormattedTextField();
 		formattedTextField.setBounds(188, 73, 260, 30);
 		contentPane.add(formattedTextField);
-		
+
 		passwordField = new JPasswordField();
 		passwordField.setBounds(188, 166, 260, 30);
 		contentPane.add(passwordField);
-		
+
 		Button btnAcess = new Button("Acessar");
+
 		btnAcess.setBounds(262, 220, 110, 30);
 		contentPane.add(btnAcess);
 		btnAcess.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				MainScreen mainScreenFrama = new MainScreen();
 				mainScreenFrama.setVisible(true);
-				
-				LoginScreen loginScreen = new LoginScreen();
-				loginScreen.setVisible(false);
+				LoginScreen.this.dispose();
+
 			}
 		});
 

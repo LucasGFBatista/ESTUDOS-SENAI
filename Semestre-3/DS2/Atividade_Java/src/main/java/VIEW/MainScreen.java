@@ -48,9 +48,11 @@ public class MainScreen extends JFrame {
 
 		
 		JButton btnVisualizar = new JButton("Visualizar Livros");
+		
 		btnVisualizar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				ListBooks listBooksFrame = new ListBooks();
+				MainScreen.this.dispose();
 	            listBooksFrame.setVisible(true);
 			}
 		});
@@ -59,9 +61,12 @@ public class MainScreen extends JFrame {
 
 		
 		JButton btnPesquisar = new JButton("Pesquisar Livros");
+		this.dispose();
 		btnPesquisar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				SearchBook searchBook = new SearchBook();
+				MainScreen.this.dispose();
+				
 				searchBook.setVisible(true);
 			}
 		});
@@ -73,6 +78,7 @@ public class MainScreen extends JFrame {
 		btnCadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				CreateBook createBookFrame = new CreateBook();
+				MainScreen.this.dispose();
 	            createBookFrame.setVisible(true);
 			}
 		});

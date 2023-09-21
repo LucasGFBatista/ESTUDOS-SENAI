@@ -73,6 +73,7 @@ public class SearchBook extends JFrame {
 		btnReturn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				MainScreen mainScreenFrama = new MainScreen();
+				SearchBook.this.dispose();
 				mainScreenFrama.setVisible(true);
 			}
 		});
