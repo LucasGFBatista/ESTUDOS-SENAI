@@ -7,8 +7,6 @@
  * 
  * */
 
-
-
 package DAO;
 
 import java.sql.Connection;
@@ -153,6 +151,25 @@ public class BookDAO {
 			JOptionPane.showMessageDialog(null, "Classe BookDAO" + erro);
 		}
 
+	}
+
+	// DELETE BOOK
+	public void deleteBook(String isbn) {
+
+		String sql = "DELETE FROM livros WHERE ISBN = ?";
+
+		conn = new ConnectionDAO().connectBd();
+
+		try {
+			pstm = conn.prepareStatement(sql);
+			pstm.setString(1, isbn);
+
+			pstm.execute();
+			pstm.close();
+
+		} catch (Exception erro) {
+			JOptionPane.showMessageDialog(null, "Classe BookDAO: " + erro);
+		}
 	}
 
 }

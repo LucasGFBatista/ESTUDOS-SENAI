@@ -1,28 +1,21 @@
 package VIEW;
-
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-
 import DAO.BookDAO;
 import DTO.BookDTO;
 
+import java.awt.EventQueue;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
 import javax.swing.JTextArea;
-import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
-
 import javax.swing.UIManager;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JButton;
-import java.awt.FlowLayout;
-import javax.swing.JTextPane;
 
 public class SearchBook extends JFrame {
 
@@ -113,7 +106,7 @@ public class SearchBook extends JFrame {
 		textField_3.setBounds(160, 179, 200, 20);
 		SearchScreen.add(textField_3);
 
-		//botão de pesquisar
+		// botão de pesquisar
 		JButton btnPesquisar = new JButton("Pesquisar");
 		btnPesquisar.setBounds(160, 220, 110, 30);
 		SearchScreen.add(btnPesquisar);
