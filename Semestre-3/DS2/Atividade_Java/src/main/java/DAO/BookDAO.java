@@ -131,27 +131,27 @@ public class BookDAO {
 	}
 
 	// UPDATE BOOK
-	private void updateBook(BookDTO objBookDTO) {
+	public void updateBook(BookDTO objBookDTO) {
+	    String sql = "UPDATE livros SET ISBN = ?, Titulo = ?, Autor = ?, AnoPublicacao = ? WHERE ISBN = ?";
 
-		String sql = "UPDATE livros set ISBN = ?, Titulo = ?, Autor = ?, AnoPublicacao = ? WHERE id = ?";
+	    conn = new ConnectionDAO().connectBd();
 
-		conn = new ConnectionDAO().connectBd();
+	    try {
+	        pstm = conn.prepareStatement(sql);
+	        pstm.setString(1, objBookDTO.getIsbn());
+	        pstm.setString(2, objBookDTO.getTitulo());
+	        pstm.setString(3, objBookDTO.getAutor());
+	        pstm.setInt(4, objBookDTO.getAnoPublicacao());
+	        pstm.setString(5, objBookDTO.getIsbn());
 
-		try {
-			pstm = conn.prepareStatement(sql);
-			pstm.setString(1, objBookDTO.getTitulo());
-			pstm.setString(2, objBookDTO.getAutor());
-			pstm.setInt(3, objBookDTO.getAnoPublicacao());
-			pstm.setString(4, objBookDTO.getIsbn());
+	        pstm.execute();
+	        pstm.close();
 
-			pstm.execute();
-			pstm.close();
-
-		} catch (Exception erro) {
-			JOptionPane.showMessageDialog(null, "Classe BookDAO" + erro);
-		}
-
+	    } catch (Exception erro) {
+	        JOptionPane.showMessageDialog(null, "Classe BookDAO" + erro);
+	    }
 	}
+
 
 	// DELETE BOOK
 	public void deleteBook(String isbn) {

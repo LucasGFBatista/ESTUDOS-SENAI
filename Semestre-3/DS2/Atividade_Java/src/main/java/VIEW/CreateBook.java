@@ -12,9 +12,11 @@ import java.awt.Font;
 import java.awt.Color;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Toolkit;
 
 public class CreateBook extends JFrame {
 
@@ -27,9 +29,7 @@ public class CreateBook extends JFrame {
 
 
 
-	/**
-	 * Create the frame.
-	 */
+	/*Criar freme*/
 	public CreateBook() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -78,13 +78,14 @@ public class CreateBook extends JFrame {
 
 		// Botões
 		//Botao cadastrar
-		JButton btnCadastrar = new JButton("Cadastrar");
+		ImageIcon iconCreate = new ImageIcon("C:\\xampp\\htdocs\\ESTUDOS-SENAI\\Semestre-3\\DS2\\Atividade_Java\\src\\main\\java\\assets\\add.png");
+		JButton btnCadastrar = new JButton("Cadastrar",iconCreate);
 		btnCadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnCadastrarBookActionPerformed(e);
 			}
 		});
-		btnCadastrar.setBounds(150, 220, 110, 30);
+		btnCadastrar.setBounds(150, 220, 120, 30);
 		CadastrarLivro.add(btnCadastrar);
 
 		//botão retornar

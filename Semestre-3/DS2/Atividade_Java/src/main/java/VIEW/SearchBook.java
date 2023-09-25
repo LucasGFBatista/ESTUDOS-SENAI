@@ -15,6 +15,7 @@ import javax.swing.UIManager;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 public class SearchBook extends JFrame {
@@ -91,7 +92,7 @@ public class SearchBook extends JFrame {
 		SearchScreen.add(textField_1);
 
 		JLabel lblAnoPublicacao = new JLabel("Ano Publicação");
-		lblAnoPublicacao.setBounds(29, 139, 80, 20);
+		lblAnoPublicacao.setBounds(29, 139, 100, 20);
 		SearchScreen.add(lblAnoPublicacao);
 
 		textField_2 = new JTextField();
@@ -107,8 +108,9 @@ public class SearchBook extends JFrame {
 		SearchScreen.add(textField_3);
 
 		// botão de pesquisar
-		JButton btnPesquisar = new JButton("Pesquisar");
-		btnPesquisar.setBounds(160, 220, 110, 30);
+		ImageIcon iconSearch = new ImageIcon("C:\\xampp\\htdocs\\ESTUDOS-SENAI\\Semestre-3\\DS2\\Atividade_Java\\src\\main\\java\\assets\\search.png");
+		JButton btnPesquisar = new JButton("Pesquisar",iconSearch);
+		btnPesquisar.setBounds(160, 220, 120, 30);
 		SearchScreen.add(btnPesquisar);
 		btnPesquisar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -141,7 +143,7 @@ public class SearchBook extends JFrame {
 				}
 			}
 		});
-		btnPesquisar.setBounds(160, 220, 110, 30);
+		
 		SearchScreen.add(btnPesquisar);
 	}
 
