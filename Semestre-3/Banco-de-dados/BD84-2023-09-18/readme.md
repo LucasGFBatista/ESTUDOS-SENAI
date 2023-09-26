@@ -15,7 +15,7 @@ Em dupla
     - Visão de faturamento por condição de pagamento e vencimento.
 
 **Anexos:**
-- ![PDF](BD84352-82677Aula61-63.pdf)
+- [PDF](BD84352-82677Aula61-63.pdf)
 - ![Modelo de banco de dados](modelagemBD.jpg)
 
 ![Alt text](image-2.png)
