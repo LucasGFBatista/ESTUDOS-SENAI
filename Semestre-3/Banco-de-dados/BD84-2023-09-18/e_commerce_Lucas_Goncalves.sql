@@ -58,7 +58,7 @@ CREATE TABLE `categorias` (
   `id_categoria` int(11) NOT NULL AUTO_INCREMENT,
   `descricao` varchar(50) NOT NULL,
   PRIMARY KEY (`id_categoria`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,7 +67,7 @@ CREATE TABLE `categorias` (
 
 LOCK TABLES `categorias` WRITE;
 /*!40000 ALTER TABLE `categorias` DISABLE KEYS */;
-INSERT INTO `categorias` VALUES (1,'Eletrônicos'),(2,'Roupas'),(3,'Livros'),(4,'Móveis');
+INSERT INTO `categorias` VALUES (1,'Eletrônicos'),(2,'Roupas'),(3,'Livros'),(4,'Móveis'),(5,'Eletrônicos'),(6,'Roupas'),(7,'Livros'),(8,'Móveis'),(9,'Eletrônicos'),(10,'Roupas'),(11,'Livros'),(12,'Móveis');
 /*!40000 ALTER TABLE `categorias` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -252,7 +252,7 @@ CREATE TABLE `fabricantes` (
   `id_fabricante` int(11) NOT NULL AUTO_INCREMENT,
   `nome_fabricante` varchar(50) NOT NULL,
   PRIMARY KEY (`id_fabricante`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -261,7 +261,7 @@ CREATE TABLE `fabricantes` (
 
 LOCK TABLES `fabricantes` WRITE;
 /*!40000 ALTER TABLE `fabricantes` DISABLE KEYS */;
-INSERT INTO `fabricantes` VALUES (1,'Sony'),(2,'Samsung'),(3,'Nike'),(4,'IKEA');
+INSERT INTO `fabricantes` VALUES (1,'Sony'),(2,'Samsung'),(3,'Nike'),(4,'IKEA'),(5,'Sony'),(6,'Samsung'),(7,'Nike'),(8,'IKEA'),(9,'Sony'),(10,'Samsung'),(11,'Nike'),(12,'IKEA');
 /*!40000 ALTER TABLE `fabricantes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -472,7 +472,7 @@ CREATE TABLE `produto` (
   KEY `id_fabricante` (`id_fabricante`),
   CONSTRAINT `produto_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id_categoria`),
   CONSTRAINT `produto_ibfk_2` FOREIGN KEY (`id_fabricante`) REFERENCES `fabricantes` (`id_fabricante`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -578,7 +578,7 @@ CREATE TABLE `usuarios` (
   `status` enum('A','B') DEFAULT NULL,
   PRIMARY KEY (`id_user`),
   UNIQUE KEY `ix_usr_1` (`email_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -640,6 +640,20 @@ SET @saved_cs_client     = @@character_set_client;
  1 AS `estoque_total`,
  1 AS `estoque_livre`,
  1 AS `estoque_reservado`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_faturamento_cond_pagto_vencimento`
+--
+
+DROP TABLE IF EXISTS `vw_faturamento_cond_pagto_vencimento`;
+/*!50001 DROP VIEW IF EXISTS `vw_faturamento_cond_pagto_vencimento`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_faturamento_cond_pagto_vencimento` AS SELECT 
+ 1 AS `condicao_pagamento`,
+ 1 AS `dias_vencimento`,
+ 1 AS `faturamento_total`*/;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -752,6 +766,24 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET collation_connection      = @saved_col_connection */;
 
 --
+-- Final view structure for view `vw_faturamento_cond_pagto_vencimento`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_faturamento_cond_pagto_vencimento`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_faturamento_cond_pagto_vencimento` AS select `cp`.`descricao` AS `condicao_pagamento`,`cpd`.`dias` AS `dias_vencimento`,sum(`p`.`total_pedido`) AS `faturamento_total` from ((`pedidos` `p` join `cond_pagto` `cp` on(`p`.`id_pagto` = `cp`.`id_pagto`)) join `cond_pagto_det` `cpd` on(`cp`.`id_pagto` = `cpd`.`id_pagto`)) group by `cp`.`descricao`,`cpd`.`dias` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
 -- Final view structure for view `vw_faturamento_por_categoria`
 --
 
@@ -832,4 +864,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-09-25 21:21:05
+-- Dump completed on 2023-09-25 21:34:45
