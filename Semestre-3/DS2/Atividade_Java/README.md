@@ -59,7 +59,7 @@ Bibliotecários, estudantes, professores e qualquer indivíduo ou organização 
 | RF05 | Exclusão de livros: Permitir a remoção de um livro usando seu ISBN.                    |
 | RF06 | Autenticação de usuário: Possuir tela de login para acesso ao sistema.                 |
 #### 2.1.1. Casos de uso
-![Modelo Conceitual](IMG-README\CASO-DE-USO.png)
+![Modelo Conceitual](DOC\CASO-DE-USO.png)
 ### 2.2. REQUISITOS NÃO FUNCIONAIS
 
 
@@ -132,13 +132,13 @@ O MySQL é um sistema de gerenciamento de banco de dados relacional (RDBMS) de c
 ### 5.2. MODELO CONCEITUAL
 Modelo conceitual é uma representação de alto nível do esquema do banco de dados, que descreve a estrutura e as relações entre as diferentes entidades.
 
-![Modelo Conceitual](IMG-README\MODELO-CONCEITUAL.png)
+![Modelo Conceitual](DOC\MODELO-CONCEITUAL.png)
 
 
 ### 5.3. MODELO LÓGICO
 Após o modelo conceitual, passamos para a fase de criação do modelo lógico. Esta fase envolve a transformação das entidades e relações do modelo conceitual em tabelas, com suas chaves primárias e seus demais atributos.
 
-![Modelo Conceitual](IMG-README\MODELO-LOGICO.png)
+![Modelo Conceitual](DOC\MODELO-LOGICO.png)
 
 ## 6. SEGURANÇA
 - Sistema de login para acesso.
