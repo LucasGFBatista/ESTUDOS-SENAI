@@ -75,8 +75,9 @@ Bibliotecários, estudantes, professores e qualquer indivíduo ou organização 
 - Cada livro deve ter um ISBN único.
 - Os campos de título, autor e ano de publicação são obrigatórios.
 %%
-| **Código** | **Regra de Negócio**  | **Descrição**                                                                                                                                                           |
-|-----|--------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+| **Código** | **Regra de Negócio**  | **Descrição**|
+|-----|-------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | RN01   | **Unicidade do ISBN**                                        | Cada livro no sistema "BookMaster" deve ter um ISBN único. Isso garante que cada livro seja identificável de forma exclusiva, evitando confusões ou conflitos de dados.|
 | RN02   | **Campos Obrigatórios**                                      | Ao cadastrar ou atualizar um livro no sistema, os campos de título, autor e ano de publicação são obrigatórios. Isso garante que os usuários tenham informações mínimas necessárias sobre cada livro.                           |
 
