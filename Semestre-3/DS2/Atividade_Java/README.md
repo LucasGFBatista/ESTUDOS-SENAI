@@ -59,7 +59,7 @@ Bibliotecários, estudantes, professores e qualquer indivíduo ou organização 
 | RF05 | Exclusão de livros: Permitir a remoção de um livro usando seu ISBN.                    |
 | RF06 | Autenticação de usuário: Possuir tela de login para acesso ao sistema.                 |
 #### 2.1.1. Casos de uso
-![Modelo Conceitual](DOC\CASO-DE-USO.png)
+![Diagrama de caso de uso](DOC\CASO-DE-USO.png)
 ### 2.2. REQUISITOS NÃO FUNCIONAIS
 
 
@@ -71,10 +71,6 @@ Bibliotecários, estudantes, professores e qualquer indivíduo ou organização 
 | RNF04      | Deve haver backup automático dos dados em intervalos regulares. |
 
 ### 2.3. REGRA DE NEGÓCIOS
-%%
-- Cada livro deve ter um ISBN único.
-- Os campos de título, autor e ano de publicação são obrigatórios.
-%%
 
 | **Código** | **Regra de Negócio**  | **Descrição**|
 |-----|-------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
